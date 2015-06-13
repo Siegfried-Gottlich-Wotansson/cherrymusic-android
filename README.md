@@ -11,6 +11,9 @@ CherryMusic Homepage: <http://www.fomori.org/cherrymusic/>
 ## Download
 
 * [Release archive](https://github.com/de-live-gdev/cherrymusic_android/releases)
+* [F-Droid](https://f-droid.org/repository/browse/?fdid=de.live.gdev.cherrymusic)
+* [Your own repo](https://github.com/de-live-gdev/cherrymusic_android/tree/master/additional/fdroid)
+
 
 ## English description
 Wrapper for [CherryMusic](http://www.fomori.org/cherrymusic/),  
@@ -44,4 +47,4 @@ Any other data than your entered data won't be collected or stored on your devic
 <img src="https://cloud.githubusercontent.com/assets/6735650/8129485/ee8b735c-1109-11e5-83ab-aad0417d74e8.png" height="70%" width="70%"  />
 
 ## Resources
-Thanks to Sekkyumu for his great iconset: <http://www.iconarchive.com/show/developpers-icons-by-sekkyumu.html>  
+Thanks to Sekkyumu for his great iconset: <http://sekkyumu.deviantart.com/art/Developpers-Icons-63052312>  
