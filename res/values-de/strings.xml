@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  WebApp -->
+    <string name="app_name">Cherry</string>
+    <string name="info_author">entwickelt von Gregor Santner</string>
+    <string name="info_additionalContact">Cherry Homepage</string>
+    <string name="pathToWebapp_tv_str">Pfad zu Cherry:</string>
+    
+    <!-- All other strings -->
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="title_activity_info">Über</string>
+    
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_login">Einloggen</string>
+    <string name="action_info">Über</string>
+    
+    <string name="exit">Beenden</string>
+    <string name="ssl_webview_error_str"> <![CDATA[<font size="38"><center><h1> SSL Zertifikat ung&uumlltig </h1></center></font><font size="25"><br> Es gibt in den Einstellungen eine Option, die es erlaubt alle Zertifikate zu akzeptieren!<br><br><b>Achtung:</b> Das Ignorieren von Zertifikats-Fehlern stellt ein Sicherheitsrisiko dar.</font>]]></string>
+    <string name="ssl_toast_error">SSL Zertifikat nicht akzeptiert</string>
+    <string name="no_valid_path"> <![CDATA[<font size="38"><center><h1> Ung&uumlltiger Pfad </h1></center></font> <font size="25"><br> Bitte die Login-Daten in den Einstellungen bearbeiten!</font>]]></string>
+    
+    <string name="username_tv_str">Login:</string>
+    <string name="password_tv_str">Passwort:</string>
+    <string name="ssl_cert_accept">Alle SSL Zertifikate akzeptieren</string>
+    <string name="auto_login_str">Auto-Login einschalten</string>
+    <string name="save_str">Profil speichern</string>
+    <string name="standard_filename">Dateiname:</string>
+    <string name="save_settings_succ">Profil gespeichert</string>    
+    <string name="profileSelection_str">Profil Auswahl</string>    
+    <string name="profileDefault">Standard</string>    
+    <string name="profile2">Profil 2</string>    
+    <string name="profile3">Profil 3</string>
+
+</resources>
