@@ -1,12 +1,13 @@
-Categories:Internet,Multimedia
+Categories:Multimedia,Internet
 License:GPLv3
-Web Site:https://github.com/de-live-gdev/cherrymusic_android
+Web Site:https://github.com/de-live-gdev/cherrymusic_android/blob/HEAD/README.md
 Source Code:https://github.com/de-live-gdev/cherrymusic_android
+Issue Tracker:https://github.com/de-live-gdev/cherrymusic_android/issues
 
 Summary:Wrapper for CherryMusic
 Description:
-Wrapper for [http://www.fomori.org/cherrymusic/ CherryMusic],
-a self-hosted streaming web-application, alternative to Ampache, Google Play Music,Spotify,..
+Wrapper for [http://www.fomori.org/cherrymusic/ CherryMusic], a self-hosted streaming web-application
+A lightweight alternative to Ampache, Google Play Music,Spotify,..
 
 See [http://www.fomori.org/cherrymusic/] for more informations.
 .
