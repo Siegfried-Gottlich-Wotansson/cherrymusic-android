@@ -1,20 +1,53 @@
-# built application files
-#*.apk
-#*.ap_
+*~
 
-# files for the dex VM
+# Gradle
+.gradle/
+.gradle
+build/
+/*/build/
+
+# User-specific configurations
+local.properties
+
+.idea
+.idea/libraries/
+.idea/runConfigurations.xml
+.idea/gradle.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+*.iml
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Built application files
+*.apk
+*.ap_
+
+# Files for the Dalvik VM
 *.dex
 
 # Java class files
 *.class
 
-# generated files
+# Generated files
 bin/
 gen/
 
-# Eclipse project files
-.classpath
-.project
-.settings
-.directory
-proguard-project.txt
+local.properties
+proguard/
+*.log
+.navigation/
