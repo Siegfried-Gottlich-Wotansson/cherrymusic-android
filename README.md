@@ -31,20 +31,32 @@ Actually there are no, and there will never be advertisments.
   <td><b>Changelog</b></td>
  </thead>
  <tr>
+    <td>v1.1</td>
+   <td>05. Oct 2015</td>
+   <td>Material Design, Gradle, Code base refactored</td>
+ </tr>
+ <tr>
 	<td>v1.0</td>
 	<td>12. Jun 2015</td>
 	<td>Initial version</td>
- </tr>
- <tr>
-	 <td>v1.1</td>
-   <td>05. Oct 2015</td>
-   <td>Material Design, Gradle, Code base refactored</td>
  </tr>
 </table>
 
 ## Privacy
 This app doesn't open connections to anywhere else than your entered cherry url.  
 Any other data than your entered data won't be collected or stored on your device.  
+
+## Donations
+<table>
+ <tr>
+	<td><a href="bitcoin:1B9ZyYdQoY9BxMe9dRUEKaZbJWsbQqfXU5?amount=0.05&label=de-live-gdev">
+    <img src="http://de-live-gdev.github.io/assets/img/personal/bitcoin/bitcoin_gdev-live-gdev_150px.png"/></a></td>
+	<td>If you like my work on <b>Cherry</b> and Open-Source, or just want to spend me a coke, consider a small donation to my bitcoin address:
+
+    <a href="http://de-live-gdev.github.io/about/#donate">
+    1B9ZyYdQoY9BxMe9dRUEKaZbJWsbQqfXU5</a></td>
+ </tr>
+</table>
 
 ## Screenshots
 
