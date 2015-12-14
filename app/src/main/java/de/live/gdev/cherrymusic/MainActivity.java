@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
             settings.setLoadWithOverviewMode(true);
             settings.setUseWideViewPort(true);
         }
+
+        // Load cherry
+        loadWebapp(profile.isAutoLogin());
     }
 
     @Override
@@ -106,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == SettingsActivity.ACTIVITY_ID &&
                 resultCode == SettingsActivity.RESULT.CHANGED) {
             profile = Profile.getDefaultProfile(this);
+            loadWebapp(profile.isAutoLogin());
+
         }
     }
 
@@ -116,13 +121,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onKeyDown(key, e);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        profile.reloadSettings();
-        loadWebapp(profile.isAutoLogin());
     }
 
     public void loadWebapp(boolean doLogin) {
