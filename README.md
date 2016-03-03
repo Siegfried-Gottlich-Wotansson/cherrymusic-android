@@ -2,7 +2,7 @@
 =======
 
 ## General
-Latest modification: 05. Oct 2015 (v1.1)  
+Latest modification: 04. Mar 2016 (v1.11)  
 License: **GPLv3**  
 Android app created and maintained by  
 Gregor Santner (<http://de-live-gdev.github.io>), 2015-  
@@ -20,7 +20,7 @@ a self-hosted streaming web-application, alternative to Ampache, Google Play Mus
 This app is intended to be used on a tablet.
 
 Developed under non commercial purposes.  
-Actually there are no, and there will never be advertisments.  
+Actually there are no, and there will never be advertisments added by the app.  
 
 ## Releases
 
@@ -30,6 +30,11 @@ Actually there are no, and there will never be advertisments.
 	<td><b>Date</b></td>
   <td><b>Changelog</b></td>
  </thead>
+ <tr>
+    <td>v1.11</td>
+   <td>04. Mar 2016</td>
+   <td>Gradle and lib versions bumped; #2</td>
+ </tr>
  <tr>
     <td>v1.1</td>
    <td>05. Oct 2015</td>
