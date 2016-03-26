@@ -5,14 +5,21 @@
 Latest modification: 04. Mar 2016 (v1.11)  
 License: **GPLv3**  
 Android app created and maintained by  
-Gregor Santner (<http://de-live-gdev.github.io>), 2015-  
+Gregor Santner (<https://de-live-gdev.github.io>), 2015-  
+
+[![Build Status](https://travis-ci.org/de-live-gdev/cherrymusic_android.svg?branch=master)](https://travis-ci.org/de-live-gdev/cherrymusic_android)
+<span class="badge-bitcoin"><a href="https://de-live-gdev.github.io/donate/#donate" title="Donate once-off to this project using Bitcoin"><img src="https://img.shields.io/badge/bitcoin-donate-yellow.svg" alt="Bitcoin donate button" /></a></span>
+<span class="badge-githubfollow"><iframe src="https://ghbtns.com/github-btn.html?user=de-live-gdev&amp;type=follow&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe></span>
+<span class="badge-githubstar"><iframe src="https://ghbtns.com/github-btn.html?user=de-live-gdev&amp;repo=cherrymusic_android&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe></span>
+
+[![F-Droid](https://f-droid.org/wiki/images/0/06/F-Droid-button_get-it-on.png)](https://f-droid.org/repository/browse/?fdfilter=cherry&fdid=de.live.gdev.cherrymusic)
 
 
 ## Download
 
 * [Release archive](https://github.com/de-live-gdev/cherrymusic_android/releases)
 * [F-Droid](https://f-droid.org/repository/browse/?fdid=de.live.gdev.cherrymusic)
-* [Your own repo](https://gitlab.com/fdroid/fdroiddata/raw/master/metadata/de.live.gdev.cherrymusic.txt)
+* [Your own F-Droid repo](https://gitlab.com/fdroid/fdroiddata/raw/master/metadata/de.live.gdev.cherrymusic.txt)
 
 ## Description
 Wrapper for [CherryMusic](http://www.fomori.org/cherrymusic/),
