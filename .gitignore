@@ -51,3 +51,4 @@ local.properties
 proguard/
 *.log
 .navigation/
+./gradlew
