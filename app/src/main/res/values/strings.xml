@@ -3,12 +3,12 @@
 
     <!-- WebApp -->
     <string name="app_name" translatable="false">Cherry</string>
-    <string name="info_author">created by Gregor Santner\nde-live-gdev.github.io/\ngdev@live.de</string>
+    <string name="info_author">created by Gregor Santner\ngsantner.github.io/\ngdev@live.de</string>
     <string name="info_additionalContact" translatable="false">Cherrymusic Homepage</string>
     <string name="page_additional_homepage" translatable="false">http://fomori.org/cherrymusic</string>
     <string name="page_additional_homepage_short" translatable="false">fomori.org/cherrymusic</string>
-    <string name="page_versioning" translatable="false">https://github.com/de-live-gdev/cherrymusic_android</string>
-    <string name="page_author" translatable="false">https://github.com/de-live-gdev</string>
+    <string name="page_versioning" translatable="false">https://github.com/gsantner/cherrymusic_android</string>
+    <string name="page_author" translatable="false">https://github.com/gsantner</string>
 
     <!-- All other strings -->
     <string name="title_activity_settings" translatable="false">@string/action_settings</string>

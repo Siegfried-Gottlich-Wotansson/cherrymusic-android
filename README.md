@@ -1,23 +1,22 @@
-![App Logo](https://raw.githubusercontent.com/de-live-gdev/cherrymusic_android/master/app/src/main/res/drawable-hdpi/ic_launcher.png "App Logo") Cherry
+![App Logo](https://raw.githubusercontent.com/gsantner/cherrymusic_android/master/app/src/main/res/drawable-hdpi/ic_launcher.png "App Logo") Cherry
 =======
 
 ## General
-Latest modification: 04. Mar 2016 (v1.11)  
 License: **GPLv3**  
 Android app created and maintained by  
-Gregor Santner (<https://de-live-gdev.github.io>), 2015-  
+Gregor Santner (<https://gsantner.github.io>), 2015-  
 
-[![Build Status](https://travis-ci.org/de-live-gdev/cherrymusic_android.svg?branch=master)](https://travis-ci.org/de-live-gdev/cherrymusic_android)
-<span class="badge-bitcoin"><a href="https://de-live-gdev.github.io/donate/#donate" title="Donate once-off to this project using Bitcoin"><img src="https://img.shields.io/badge/bitcoin-donate-yellow.svg" alt="Bitcoin donate button" /></a></span>
-<span class="badge-githubfollow"><iframe src="https://ghbtns.com/github-btn.html?user=de-live-gdev&amp;type=follow&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe></span>
-<span class="badge-githubstar"><iframe src="https://ghbtns.com/github-btn.html?user=de-live-gdev&amp;repo=cherrymusic_android&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe></span>
+[![Build Status](https://travis-ci.org/gsantner/cherrymusic_android.svg?branch=master)](https://travis-ci.org/gsantner/cherrymusic_android)
+<span class="badge-bitcoin"><a href="https://gsantner.github.io/donate/#donate" title="Donate once-off to this project using Bitcoin"><img src="https://img.shields.io/badge/bitcoin-donate-yellow.svg" alt="Bitcoin donate button" /></a></span>
+<span class="badge-githubfollow"><iframe src="https://ghbtns.com/github-btn.html?user=gsantner&amp;type=follow&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe></span>
+<span class="badge-githubstar"><iframe src="https://ghbtns.com/github-btn.html?user=gsantner&amp;repo=cherrymusic_android&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe></span>
 
 [![F-Droid](https://f-droid.org/wiki/images/0/06/F-Droid-button_get-it-on.png)](https://f-droid.org/repository/browse/?fdfilter=cherry&fdid=de.live.gdev.cherrymusic)
 
 
 ## Download
 
-* [Release archive](https://github.com/de-live-gdev/cherrymusic_android/releases)
+* [Release archive](https://github.com/gsantner/cherrymusic_android/releases)
 * [F-Droid](https://f-droid.org/repository/browse/?fdid=de.live.gdev.cherrymusic)
 * [Your own F-Droid repo](https://gitlab.com/fdroid/fdroiddata/raw/master/metadata/de.live.gdev.cherrymusic.txt)
 
@@ -37,6 +36,11 @@ Actually there are no, and there will never be advertisments added by the app.
 	<td><b>Date</b></td>
   <td><b>Changelog</b></td>
  </thead>
+ <tr>
+    <td>v1.12</td>
+   <td>31. May 2016</td>
+   <td></td>
+ </tr>
  <tr>
     <td>v1.11</td>
    <td>04. Mar 2016</td>
@@ -61,11 +65,11 @@ Any other data than your entered data won't be collected or stored on your devic
 ## Donations
 <table>
  <tr>
-	<td><a href="bitcoin:1B9ZyYdQoY9BxMe9dRUEKaZbJWsbQqfXU5?amount=0.05&label=de-live-gdev">
-    <img src="http://de-live-gdev.github.io/assets/img/personal/bitcoin/bitcoin_gdev-live-gdev_150px.png"/></a></td>
+	<td><a href="bitcoin:1B9ZyYdQoY9BxMe9dRUEKaZbJWsbQqfXU5?amount=0.05&label=gsantner">
+    <img src="https://gsantner.github.io/assets/img/personal/bitcoin/bitcoin_gdev-live-gdev_150px.png"/></a></td>
 	<td>If you like my work on <b>Cherry</b> and Open-Source, or just want to spend me a coke, consider a small donation to my bitcoin address:
 
-    <a href="http://de-live-gdev.github.io/about/#donate">
+    <a href="https://gsantner.github.io/about/#donate">
     1B9ZyYdQoY9BxMe9dRUEKaZbJWsbQqfXU5</a></td>
  </tr>
 </table>
@@ -82,4 +86,4 @@ Settings      |  Info screen
 ![Cherry settings screen](https://cloud.githubusercontent.com/assets/6735650/10288475/5d51d5f8-6b99-11e5-8bc7-41352b2e7a4f.png "Settings screen")  |  ![Cherry info screen](https://cloud.githubusercontent.com/assets/6735650/10288482/6e049228-6b99-11e5-8f1a-72034b9525f7.png "Info screen")
 
 ## Notice  
-Shares code base with [Kimai TimeTracker](https://github.com/de-live-gdev/kimai-android)
+Shares code base with [Kimai TimeTracker](https://github.com/gsantner/kimai-android)
