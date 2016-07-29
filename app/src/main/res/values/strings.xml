@@ -7,8 +7,8 @@
     <string name="info_additionalContact" translatable="false">Cherrymusic Homepage</string>
     <string name="page_additional_homepage" translatable="false">http://fomori.org/cherrymusic</string>
     <string name="page_additional_homepage_short" translatable="false">fomori.org/cherrymusic</string>
-    <string name="page_versioning" translatable="false">https://github.com/gsantner/cherrymusic_android</string>
-    <string name="page_author" translatable="false">https://github.com/gsantner</string>
+    <string name="page_versioning" translatable="false">https://github.com/gsantner/cherrymusic-android</string>
+    <string name="page_author" translatable="false">https://gsantner.github.io/</string>
 
     <!-- All other strings -->
     <string name="title_activity_settings" translatable="false">@string/action_settings</string>
