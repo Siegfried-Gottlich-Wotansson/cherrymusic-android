@@ -4,7 +4,8 @@
 ## General
 License: **GPLv3**  
 Android app created and maintained by  
-Gregor Santner (<https://gsantner.github.io>), 2015-  
+Gregor Santner (<https://gsantner.github.io>), 2015-2017  
+**Discontinued as of 27 Jan 2017 - I personally don't use CherryMusic anymore and got no instance to test it. I'm always open for PR's/Contributions, but won't invest time in developing and testing the app myself.**
 
 [![Build Status](https://travis-ci.org/gsantner/cherrymusic-android.svg?branch=master)](https://travis-ci.org/gsantner/cherrymusic-android)
 <span class="badge-bitcoin"><a href="https://gsantner.github.io/donate/#donate" title="Donate once-off to this project using Bitcoin"><img src="https://img.shields.io/badge/bitcoin-donate-yellow.svg" alt="Bitcoin donate button" /></a></span>
