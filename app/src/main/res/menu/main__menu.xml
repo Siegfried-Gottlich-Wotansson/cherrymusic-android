@@ -1,0 +1,53 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".activity.MainActivity">
+
+    <group
+        android:id="@+id/nav1"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/action_login"
+            android:icon="@drawable/ic_refresh_white_48px"
+            android:title="@string/login"/>
+
+        <item
+            android:id="@+id/action_reload"
+            android:icon="@drawable/ic_refresh_white_48px"
+            android:title="@string/reload"/>
+
+        <item
+            android:id="@+id/action_settings"
+            android:icon="@drawable/ic_settings_white_48px"
+            android:title="@string/settings"/>
+        <item
+            android:id="@+id/action_exit"
+            android:icon="@drawable/ic_clear_white_48px"
+            android:title="@string/exit"/>
+    </group>
+
+
+    <group
+        android:id="@+id/nav2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/action_donate_bitcoin"
+            android:icon="@drawable/ic_favorite_white_48px"
+            android:visible="false"
+            android:title="@string/donate_bitcoin"/>
+        <item
+            android:id="@+id/action_info"
+            android:icon="@drawable/ic_info_white_48px"
+            android:title="@string/info"/>
+
+        <item
+            android:id="@+id/action_homepage_author"
+            android:icon="@drawable/ic_language_white_48px"
+            android:title="@string/blog"/>
+
+        <item
+            android:id="@+id/action_homepage_additional"
+            android:icon="@drawable/ic_language_white_48px"
+            android:title="@string/info_additionalContact"/>
+    </group>
+</menu>

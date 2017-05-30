@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_title__general_settings">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/entries__profiles"
+            android:entryValues="@array/values__zero_to_two"
+            android:key="@string/pref_key__app_selected_profile"
+            android:summary="@string/profile"
+            android:title="@string/profile_selection" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key__show_main_fab"
+            android:title="@string/show_button_on_the_bottom" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/profile">
+
+        <Preference
+            android:key="@string/profile_1"
+            android:title="@string/profile_1" />
+
+        <Preference
+            android:key="@string/profile_2"
+            android:title="@string/profile_2" />
+
+        <Preference
+            android:key="@string/profile_3"
+            android:title="@string/profile_3" />
+    </PreferenceCategory>
+</PreferenceScreen>

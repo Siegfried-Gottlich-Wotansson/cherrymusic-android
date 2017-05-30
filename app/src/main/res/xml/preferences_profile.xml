@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress AndroidElementNotAllowed -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_title__general_settings">
+
+        <EditTextPreference
+            android:hint="@string/default_path_domain_and_folder"
+            android:key="@string/pref_key__profile_path_domain_and_directory"
+            android:title="@string/path_domain_and_directory" />
+
+        <EditTextPreference
+            android:defaultValue="@string/default_username"
+            android:hint="@string/username"
+            android:key="@string/pref_key__profile_login_username"
+            android:title="@string/username" />
+
+        <EditTextPreference
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:key="@string/pref_key__profile_login_password"
+            android:title="@string/password" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_key__profile_autologin"
+            android:title="@string/enable_auto_login" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_title__expert_settings">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key__profile_accept_all_ssl_certs"
+            android:title="@string/accept_all_ssl_certificates" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

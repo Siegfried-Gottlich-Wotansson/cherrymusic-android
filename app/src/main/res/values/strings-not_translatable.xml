@@ -1,0 +1,49 @@
+<!--suppress CheckTagEmptyBody -->
+<resources>
+
+    <!-- General -->
+    <string name="app_www_source" translatable="false">https://github.com/gsantner/cherrymusic-android</string>
+    <string name="info_additionalContact" translatable="false">Cherrymusic Homepage</string>
+    <string name="page_additional_homepage" translatable="false">http://www.fomori.org/cherrymusic/</string>
+    <string name="page_author" translatable="false">https://gsantner.github.io/</string>
+    <string name="default_filename" translatable="false"></string>
+    <string name="blog" translatable="false">Blog</string>
+    <string name="default_username" translatable="false">cherry</string>
+    <string name="default_path_domain_and_folder" translatable="false">https://localhost/cherrymusic</string>
+
+    <string name="donate__bitcoin_id" translatable="false">1B9ZyYdQoY9BxMe9dRUEKaZbJWsbQqfXU5</string>
+    <string name="donate__bitcoin_amount" translatable="false">0.01</string>
+    <string name="donate__bitcoin_message" translatable="false">Have some coke, and a nice day</string>
+    <string name="donate__bitcoin_url" translatable="false">https://gsantner.github.io/donate/#donate</string>
+
+
+    <string name="app_version_v" translatable="false">App Version  v%1$s</string>
+    <string name="info__mit_license_text" translatable="false">
+        Copyright © 2014-2017
+        \nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        \n
+        \nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+    </string>
+
+
+    <!-- Aliases -->
+    <string name="title_activity_settings" translatable="false">@string/settings</string>
+    <string name="title_activity_info" translatable="false">@string/info</string>
+
+    <!-- Prefs -->
+    <string name="pref_key__app_first_start" translatable="false">pref_key__app_first_start</string>
+    <string name="pref_key__app_first_start_current_version" translatable="false">pref_key__app_first_start_current_version</string>
+    <string name="pref_key__app_selected_profile" translatable="false">pref_key__app_selected_profile</string>
+
+    <string name="pref_key__profile_autologin" translatable="false">autologin</string>
+    <string name="pref_key__profile_accept_all_ssl_certs" translatable="false">sslAccept</string>
+    <string name="pref_key__profile_path_filename" translatable="false">filename</string>
+    <string name="pref_key__profile_login_username" translatable="false">username</string>
+    <string name="pref_key__profile_login_password" translatable="false">password</string>
+    <string name="pref_key__profile_path_domain_and_directory" translatable="false">path</string>
+    <string name="pref_key__profile_load_in_desktop_mode" translatable="false">pref_key__profile_load_in_desktop_mode</string>
+    <string name="pref_key__profile_httpauth_username" translatable="false">pref_key__profile_httpauth_username</string>
+    <string name="pref_key__profile_httpauth_password" translatable="false">pref_key__profile_httpauth_password</string>
+    <string name="pref_key__show_main_fab" translatable="false">pref_key__show_main_fab</string>
+    <string name="pref_key__app_reload_required" translatable="false">pref_key__app_reload_required</string>
+</resources>

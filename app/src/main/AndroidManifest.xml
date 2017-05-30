@@ -6,14 +6,15 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="${appIcon}"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:name="de.live.gdev.cherrymusic.MainActivity"
+            android:name=".activity.MainActivity"
+            android:icon="${appIcon}"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -23,24 +24,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="de.live.gdev.cherrymusic.SettingsActivity"
+            android:name=".activity.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="de.live.gdev.cherrymusic.MainActivity"
+            android:parentActivityName="de.live.gdev.cherrymusic.activity.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="de.live.gdev.cherrymusic.MainActivity" />
+                android:value="de.live.gdev.cherrymusic.activity.MainActivity" />
         </activity>
         <activity
-            android:name="de.live.gdev.cherrymusic.InfoActivity"
+            android:name=".activity.InfoActivity"
             android:label="@string/title_activity_info"
-            android:parentActivityName="de.live.gdev.cherrymusic.MainActivity"
+            android:parentActivityName="de.live.gdev.cherrymusic.activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="de.live.gdev.cherrymusic.MainActivity" />
+                android:value="de.live.gdev.cherrymusic.activity.MainActivity" />
         </activity>
     </application>
 
