@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">@color/accent</color>
+    <color name="colorPrimaryDark">@color/primary_dark</color>
 
     <!-- Colors from Palette -->
     <color name="primary">#1F2036</color>

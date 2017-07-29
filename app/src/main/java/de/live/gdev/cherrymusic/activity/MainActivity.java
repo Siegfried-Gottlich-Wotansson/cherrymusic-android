@@ -99,20 +99,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Show first start dialog / changelog
         try {
-            if (appSettings.isAppFirstStart()) {
-                HelpersA.get(this).showDialogWithHtmlTextView(R.string.changelog, new SimpleMarkdownParser().parse(
-                        getResources().openRawResource(R.raw.licenses_3rd_party),
-                        SimpleMarkdownParser.FILTER_ANDROID_TEXTVIEW, "").getHtml()
-                );
+            SimpleMarkdownParser mdParser = SimpleMarkdownParser.get().setDefaultSmpFilter(SimpleMarkdownParser.FILTER_ANDROID_TEXTVIEW);
+            if (appSettings.isAppFirstStart(true)) {
+                String html = mdParser.parse(getString(R.string.copyright_license_text_official).replace("\n", "  \n"), "").getHtml();
+                html += mdParser.parse(getResources().openRawResource(R.raw.licenses_3rd_party), "").getHtml();
+
+                HelpersA.get(this).showDialogWithHtmlTextView(R.string.licenses, html);
             } else if (appSettings.isAppCurrentVersionFirstStart()) {
-                HelpersA.get(this).showDialogWithHtmlTextView(R.string.changelog,
-                        new SimpleMarkdownParser().parse(
-                                getResources().openRawResource(R.raw.changelog),
-                                SimpleMarkdownParser.FILTER_ANDROID_TEXTVIEW, "").getHtml());
+                mdParser.parse(
+                        getResources().openRawResource(R.raw.changelog), "");
+                HelpersA.get(this).showDialogWithHtmlTextView(R.string.changelog, mdParser.getHtml());
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
     }
 
     @Override
@@ -145,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
             case R.id.action_info: {
-                startActivity(new Intent(this, InfoActivity.class));
+                startActivity(new Intent(this, AboutActivity.class));
                 return true;
             }
             case R.id.action_exit: {

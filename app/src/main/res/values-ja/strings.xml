@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="settings">設定</string>
+    <string name="login">ログイン</string>
+    <string name="info">アプリについて</string>
+
+    <string name="exit">ログアウトして終了</string>
+    <string name="username">ユーザー名</string>
+    <string name="password">パスワード</string>
+    <string name="filename">ファイル名</string>
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> パスが無効です </h1></center></font> <font size="25"><br> 設定を確認してください!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> SSL 証明書が無効です </h1></center></font><font size="25"> <br> すべての SSL 証明書を受け入れるオプションがあります。<br><br><b> 注意:</b> 証明書のエラーを無視することはセキュリティリスクがあります!</font>]]></string>
+    <string name="ssl_toast_error">SSL 証明書が受け入れられません</string>
+
+    <string name="donate_bitcoin">Bitcoin で寄付</string>
+
+    <string name="enable_auto_login">自動ログインを有効にする</string>
+    <string name="accept_all_ssl_certificates">すべての SSL 証明書を受け入れる</string>
+    <string name="profile_selection">プロファイルの選択</string>
+    <string name="profile_1">デフォルト</string>
+    <string name="profile_2">プロファイル 2</string>
+    <string name="profile_3">プロファイル 3</string>
+    <string name="path_domain_and_directory">Cherrymusic のパス</string>
+    </resources>

@@ -34,9 +34,10 @@
 
 
     <!-- InfoActivity -->
-    <string name="info__contributors">Contributors</string>
-    <string name="info__project_team">Project team</string>
-    <string name="info__licenses">Licenses</string>
-    <string name="info__show_app_license">Show license of the app</string>
-    <string name="info__show_third_party_licenses">Show 3rd party licenses</string>
+    <string name="contributors">Contributors</string>
+    <string name="team">Team</string>
+    <string name="licenses">Licenses</string>
+    <string name="show_app_license">Show license of the app</string>
+    <string name="show_third_party_licenses">Show 3rd party licenses</string>
+    <string name="more_information">More Information</string>
 </resources>

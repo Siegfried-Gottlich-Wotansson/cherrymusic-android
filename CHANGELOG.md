@@ -1,3 +1,8 @@
+### v1.3.1
+- Update opoc
+- Update license info
+- Update about activity
+
 ### v1.3.0
 - Change license to MIT
 - Use opoc/Helpers

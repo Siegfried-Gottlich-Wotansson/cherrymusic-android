@@ -26,10 +26,10 @@
     <string name="profile_2">Profil 2</string>
     <string name="profile_3">Profil 3</string>
     <string name="path_domain_and_directory">Pfad (Protokoll, Domain, Ordner)</string>
-    <string name="info__contributors">Beitragende</string>
-    <string name="info__project_team">Projektteam</string>
+    <string name="contributors">Beitragende</string>
+    <string name="team">Projektteam</string>
 
-    <string name="info__licenses">Lizenzen</string>
-    <string name="info__show_app_license">Lizenz der App anzeigen</string>
-    <string name="info__show_third_party_licenses">Drittanbieter Lizenzen anzeigen</string>
+    <string name="licenses">Lizenzen</string>
+    <string name="show_app_license">Lizenz der App anzeigen</string>
+    <string name="show_third_party_licenses">Drittanbieter Lizenzen anzeigen</string>
     </resources>

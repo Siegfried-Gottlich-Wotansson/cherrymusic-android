@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="settings">Réglages</string>
+    <string name="login">Login</string>
+    <string name="info">À Propos</string>
+
+    <string name="exit">Se déconnecter et fermer</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="filename">Nom du fichier</string>
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Pas de chemin valide </h1></center></font> <font size="25"><br> Veuillez vérifier vos réglages SVP!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Certificat SSL invalide </h1></center></font><font size="25"> <br> Il existe une option pour accepter tous les certificats SSL.<br><br><b> Caution:</b> Ignoring certificate errors is a security risk!</font>]]></string>
+    <string name="ssl_toast_error">Certificat SSL non accepté</string>
+
+    <string name="donate_bitcoin">Faire un don en Bitcoin</string>
+
+<string name="enable_auto_login">Activer la connexion automatique</string>
+    <string name="accept_all_ssl_certificates">Accepter tous les certificats SSL</string>
+    <string name="profile_selection">Sélection du profil</string>
+    <string name="profile_1">Défaut</string>
+    <string name="profile_2">Profil 2</string>
+    <string name="profile_3">Profil 3</string>
+    <string name="path_domain_and_directory">Chemin vers Cherrymusic :</string>
+    </resources>

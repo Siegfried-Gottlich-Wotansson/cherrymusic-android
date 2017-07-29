@@ -28,9 +28,11 @@ public class AppSettings extends AppSettingsBase {
     //## Settings options
     //############################################
 
-    public boolean isAppFirstStart() {
+    public boolean isAppFirstStart(boolean doSet) {
         boolean value = getBool(prefApp, R.string.pref_key__app_first_start, true);
-        setBool(prefApp, R.string.pref_key__app_first_start, false);
+        if (doSet) {
+            setBool(prefApp, R.string.pref_key__app_first_start, false);
+        }
         return value;
     }
 
