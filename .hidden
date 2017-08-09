@@ -6,3 +6,4 @@ gradlew.bat
 local.properties
 memetastic.iml
 settings.gradle
+replacePackageName.sh

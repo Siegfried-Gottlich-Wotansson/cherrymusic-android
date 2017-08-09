@@ -17,7 +17,7 @@
  * Intended to use together: SimpleMarkdownParser, Helpers, AboutActivity and it's xml-layout.
  */
 
-package de.live.gdev.cherrymusic.activity;
+package io.github.gsantner.webappwithlogin.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -36,8 +36,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.live.gdev.cherrymusic.R;
-import io.github.gsantner.opoc.util.Helpers;
-import io.github.gsantner.opoc.util.HelpersA;
+import io.github.gsantner.webappwithlogin.util.Helpers;
+import io.github.gsantner.webappwithlogin.util.HelpersA;
 import io.github.gsantner.opoc.util.SimpleMarkdownParser;
 
 @SuppressWarnings("unused")
@@ -119,7 +119,7 @@ public class AboutActivity extends AppCompatActivity {
         Context context = v.getContext();
         switch (v.getId()) {
             case R.id.about__activity__text_app_version: {
-                HelpersA.get(this).openWebpageInExternalBrowser(getString(R.string.app_www_source));
+                Helpers.get().openWebpageInExternalBrowser(getString(R.string.app_www_source));
                 break;
             }
             case R.id.about__activity__button_app_license: {

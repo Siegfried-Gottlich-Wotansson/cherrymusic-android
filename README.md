@@ -1,4 +1,4 @@
-![App Logo](https://raw.githubusercontent.com/gsantner/cherrymusic-android/master/app/src/main/res/drawable-hdpi/ic_launcher.png "App Logo") Cherry
+![App Logo](https://raw.githubusercontent.com/gsantner/cherrymusic-android/master/wawl/res/drawable-hdpi/ic_launcher.png "App Logo") Cherry
 =======
 
 ## General

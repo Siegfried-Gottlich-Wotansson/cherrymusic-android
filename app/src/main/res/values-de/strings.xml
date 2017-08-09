@@ -27,7 +27,7 @@
     <string name="profile_3">Profil 3</string>
     <string name="path_domain_and_directory">Pfad (Protokoll, Domain, Ordner)</string>
     <string name="contributors">Beitragende</string>
-    <string name="team">Projektteam</string>
+    <string name="project_team">Projektteam</string>
 
     <string name="licenses">Lizenzen</string>
     <string name="show_app_license">Lizenz der App anzeigen</string>

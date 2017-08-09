@@ -1,13 +1,13 @@
-package de.live.gdev.cherrymusic.util;
+package io.github.gsantner.webappwithlogin.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 
-import de.live.gdev.cherrymusic.App;
 import de.live.gdev.cherrymusic.BuildConfig;
 import de.live.gdev.cherrymusic.R;
 import io.github.gsantner.opoc.util.AppSettingsBase;
+import io.github.gsantner.webappwithlogin.App;
 
 public class AppSettings extends AppSettingsBase {
     private SharedPreferences prefCurrentProfile;
@@ -29,30 +29,30 @@ public class AppSettings extends AppSettingsBase {
     //############################################
 
     public boolean isAppFirstStart(boolean doSet) {
-        boolean value = getBool(prefApp, R.string.pref_key__app_first_start, true);
+        boolean value = getBool(_prefApp, R.string.pref_key__app_first_start, true);
         if (doSet) {
-            setBool(prefApp, R.string.pref_key__app_first_start, false);
+            setBool(_prefApp, R.string.pref_key__app_first_start, false);
         }
         return value;
     }
 
     @SuppressWarnings("ConstantConditions")
     public boolean isAppCurrentVersionFirstStart() {
-        int value = getInt(prefApp, R.string.pref_key__app_first_start_current_version, -1);
-        setInt(prefApp, R.string.pref_key__app_first_start_current_version, BuildConfig.VERSION_CODE);
+        int value = getInt(_prefApp, R.string.pref_key__app_first_start_current_version, -1);
+        setInt(_prefApp, R.string.pref_key__app_first_start_current_version, BuildConfig.VERSION_CODE);
         return value != BuildConfig.VERSION_CODE && !BuildConfig.IS_TEST_BUILD;
     }
 
     public boolean isShowMainFab() {
-        return getBool(prefApp, R.string.pref_key__show_main_fab, true);
+        return getBool(_prefApp, R.string.pref_key__show_main_fab, true);
     }
 
     public boolean isReloadRequired() {
-        return getBool(prefApp, R.string.pref_key__app_reload_required, false);
+        return getBool(_prefApp, R.string.pref_key__app_reload_required, false);
     }
 
     public void setReloadRequired(boolean value) {
-        setBool(prefApp, R.string.pref_key__app_reload_required, value);
+        setBool(_prefApp, R.string.pref_key__app_reload_required, value);
     }
 
     public SharedPreferences getSharedPreferenceCurrentProfile() {
@@ -64,12 +64,12 @@ public class AppSettings extends AppSettingsBase {
     //# Profile
     //#############
     public void loadSelectedProfile() {
-        prefCurrentProfile = context.getSharedPreferences("Profile" + getSelectedProfileNr(), Context.MODE_PRIVATE);
+        prefCurrentProfile = _context.getSharedPreferences("Profile" + getSelectedProfileNr(), Context.MODE_PRIVATE);
     }
 
     public void loadProfile(int nr) {
         nr = nr >= 0 && nr < 3 ? nr : 0;
-        prefCurrentProfile = context.getSharedPreferences("Profile" + nr, Context.MODE_PRIVATE);
+        prefCurrentProfile = _context.getSharedPreferences("Profile" + nr, Context.MODE_PRIVATE);
     }
 
     public int getSelectedProfileNr() {
@@ -77,7 +77,7 @@ public class AppSettings extends AppSettingsBase {
     }
 
     public boolean isProfileEmpty() {
-        return getProfilePathDomainAndDirectory().equals(rstr(R.string.default_path_domain_and_folder))
+        return TextUtils.isEmpty(getProfilePathDomainAndDirectory())
                 || TextUtils.isEmpty(getProfileLoginPassword());
     }
 
@@ -87,7 +87,7 @@ public class AppSettings extends AppSettingsBase {
     }
 
     public String getProfilePathDomainAndDirectory() {
-        String ret = getString(prefCurrentProfile, R.string.pref_key__profile_path_domain_and_directory, rstr(R.string.default_path_domain_and_folder));
+        String ret = getString(prefCurrentProfile, R.string.pref_key__profile_path_domain_and_directory, "");
         if (!TextUtils.isEmpty(ret) && ret.endsWith("/")) {
             ret = ret.substring(0, ret.length() - 1);
             setProfilePathDomainAndDirectory(ret);
@@ -106,7 +106,7 @@ public class AppSettings extends AppSettingsBase {
     }
 
     public String getProfilePathFilename() {
-        return getString(prefCurrentProfile, R.string.pref_key__profile_path_filename, "");
+        return getString(prefCurrentProfile, R.string.pref_key__profile_path_filename, rstr(R.string.default_path_filename));
     }
 
     public String getProfileLoginUsername() {
@@ -139,5 +139,18 @@ public class AppSettings extends AppSettingsBase {
 
     public String getProfileHttpAuthPassword() {
         return getString(prefCurrentProfile, R.string.pref_key__profile_httpauth_password, "");
+    }
+
+    public void setProfileLoginUsername(String value) {
+        setString(prefCurrentProfile, R.string.pref_key__profile_login_username, value);
+    }
+
+    public void getProfileLoginPassword(String value) {
+        setString(prefCurrentProfile, R.string.pref_key__profile_login_password, value);
+    }
+
+    public void selectProfile(int index) {
+        setInt(R.string.pref_key__app_selected_profile, index);
+        loadSelectedProfile();
     }
 }

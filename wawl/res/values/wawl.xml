@@ -1,0 +1,38 @@
+﻿<resources>
+    <!-- Wawl strings -->
+    <string name="app_www_source" translatable="false">https://github.com/gsantner/cherrymusic-android</string>
+    <string name="info_additionalContact" translatable="false">Cherrymusic Homepage</string>
+    <string name="page_additional_homepage" translatable="false">http://www.fomori.org/cherrymusic/</string>
+    <string name="default_path_filename" translatable="false"></string>
+    <string name="default_username" translatable="false">cherry</string>
+    <string name="default_path_domain_and_folder" translatable="false">https://cherrymusic.lan</string>
+
+    <bool name="should_exit_with_system_too">true</bool>
+
+    <!-- Colors from Palette -->
+    <color name="primary">#1F2036</color>
+    <color name="primary_dark">#455A64</color>
+    <color name="primary_light">#CFD8DC</color>
+    <color name="accent">#F1043A</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <!-- End colors from Palette -->
+
+    <string name="copyright_license_text_official" translatable="false"><![CDATA[
+        ### Copyright © 2014-2017
+        \n**Kimai TimeTracker contributors**
+        \n### Copyright © 2015-2017
+        \n**Cherry Android contributors**
+        \n
+        \n**Get the official version of Cherry:**
+        \n
+            [Source code](https://github.com/gsantner/cherrymusic-android) | [F-Droid](https://f-droid.org/repository/browse/?fdid=de.live.gdev.cherrymusic)
+        \n
+        \nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        \n
+        \nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+        \n
+    ]]></string>
+</resources>

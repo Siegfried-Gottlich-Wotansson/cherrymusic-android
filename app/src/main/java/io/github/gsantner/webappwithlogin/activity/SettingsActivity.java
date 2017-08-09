@@ -1,4 +1,4 @@
-package de.live.gdev.cherrymusic.activity;
+package io.github.gsantner.webappwithlogin.activity;
 
 import android.annotation.SuppressLint;
 import android.app.FragmentTransaction;
@@ -15,14 +15,13 @@ import android.view.View;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.live.gdev.cherrymusic.R;
-import de.live.gdev.cherrymusic.util.AppSettings;
+import io.github.gsantner.webappwithlogin.util.AppSettings;
 
 public class SettingsActivity extends AppCompatActivity {
     @BindView(R.id.settings_appbar)
     protected AppBarLayout appBarLayout;
     @BindView(R.id.settings_toolbar)
     protected Toolbar toolbar;
-
 
     public void onCreate(Bundle b) {
         super.onCreate(b);
@@ -184,7 +183,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         public void loadSummaries() {
             findPreference(getString(R.string.pref_key__profile_path_domain_and_directory)).setSummary(appSettings.isProfileEmpty() ? "" : appSettings.getProfilePathDomainAndDirectory());
-            //findPreference(getString(R.string.pref_key__profile_path_filename)).setSummary(appSettings.getProfilePathFilename());
+            findPreference(getString(R.string.pref_key__profile_path_filename)).setSummary(appSettings.getProfilePathFilename());
             findPreference(getString(R.string.pref_key__profile_login_username)).setSummary(appSettings.getProfileLoginUsername());
         }
 

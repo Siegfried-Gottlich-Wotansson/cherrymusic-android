@@ -1,15 +1,8 @@
-<!--suppress CheckTagEmptyBody -->
 <resources>
 
     <!-- General -->
-    <string name="app_www_source" translatable="false">https://github.com/gsantner/cherrymusic-android</string>
-    <string name="info_additionalContact" translatable="false">Cherrymusic Homepage</string>
-    <string name="page_additional_homepage" translatable="false">http://www.fomori.org/cherrymusic/</string>
     <string name="page_author" translatable="false">https://gsantner.github.io/</string>
-    <string name="default_filename" translatable="false"></string>
     <string name="blog" translatable="false">Blog</string>
-    <string name="default_username" translatable="false">cherry</string>
-    <string name="default_path_domain_and_folder" translatable="false">https://localhost/cherrymusic</string>
 
     <string name="donate__bitcoin_id" translatable="false">1B9ZyYdQoY9BxMe9dRUEKaZbJWsbQqfXU5</string>
     <string name="donate__bitcoin_amount" translatable="false">0.01</string>
@@ -18,24 +11,6 @@
 
 
     <string name="app_version_v" translatable="false">App Version  v%1$s</string>
-    <!-- You are NOT allowed to remove parts of the license text below-->
-    <string name="copyright_license_text_official" translatable="false"><![CDATA[
-        ### Copyright © 2014-2017
-        \n**Kimai TimeTracker contributors**
-        \n### Copyright © 2015-2017
-        \n**Cherry Android contributors**
-        \n
-        \n**Get the official version of Cherry Android:**
-        \n
-            [Source code](https://github.com/gsantner/cherrymusic-android) | [F-Droid](https://f-droid.org/repository/browse/?fdid=de.live.gdev.cherrymusic)
-        \n
-        \nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-        \n
-        \nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
-        \n
-    ]]></string>
-    <!-- License end -->
-
 
     <!-- Aliases -->
     <string name="title_activity_settings" translatable="false">@string/settings</string>

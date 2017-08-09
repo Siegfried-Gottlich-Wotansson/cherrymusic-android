@@ -33,11 +33,12 @@
     <string name="path_domain_and_directory">Path (Protocol, domain, folder)</string>
 
 
-    <!-- InfoActivity -->
+    <!-- AboutActivity -->
     <string name="contributors">Contributors</string>
-    <string name="team">Team</string>
+    <string name="project_team">Project team</string>
     <string name="licenses">Licenses</string>
     <string name="show_app_license">Show license of the app</string>
     <string name="show_third_party_licenses">Show 3rd party licenses</string>
-    <string name="more_information">More Information</string>
+    <string name="team">Team</string>
+    <string name="more_information">More information</string>
 </resources>

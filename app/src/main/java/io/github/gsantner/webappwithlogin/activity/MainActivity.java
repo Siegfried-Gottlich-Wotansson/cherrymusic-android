@@ -1,8 +1,7 @@
-package de.live.gdev.cherrymusic.activity;
+package io.github.gsantner.webappwithlogin.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -23,8 +22,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
-import org.apache.http.util.EncodingUtils;
-
 import java.io.IOException;
 
 import butterknife.BindView;
@@ -33,30 +30,31 @@ import butterknife.OnClick;
 import butterknife.OnLongClick;
 import de.live.gdev.cherrymusic.BuildConfig;
 import de.live.gdev.cherrymusic.R;
-import de.live.gdev.cherrymusic.util.AppSettings;
-import io.github.gsantner.opoc.util.Helpers;
-import io.github.gsantner.opoc.util.HelpersA;
 import io.github.gsantner.opoc.util.SimpleMarkdownParser;
+import io.github.gsantner.webappwithlogin.util.AppSettings;
+import io.github.gsantner.webappwithlogin.util.Helpers;
+import io.github.gsantner.webappwithlogin.util.HelpersA;
+import wawl.WawlOverrides;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public static final boolean LOAD_IN_DESKTOP_MODE = true;
 
     @BindView(R.id.web_view)
-    WebView webView;
+    public WebView webView;
 
     @BindView(R.id.toolbar)
-    Toolbar toolbar;
+    public Toolbar toolbar;
 
     @BindView(R.id.drawer_layout)
-    DrawerLayout drawer;
+    public DrawerLayout drawer;
 
     @BindView(R.id.nav_view)
-    NavigationView navigationView;
+    public NavigationView navigationView;
 
     @BindView(R.id.fab)
-    FloatingActionButton fab;
+    public FloatingActionButton fab;
 
-    AppSettings appSettings;
+    protected AppSettings appSettings;
 
     @Override
     @SuppressLint({"SetTextI18n", "SetJavaScriptEnabled"})
@@ -114,7 +112,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
@@ -157,7 +154,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 webView.clearMatches();
                 webView.clearSslPreferences();
                 finish();
-                System.exit(0);
+                if (getResources().getBoolean(R.bool.should_exit_with_system_too)) {
+                    System.exit(0);
+                }
                 return true;
             }
             case R.id.action_reload: {
@@ -165,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
             case R.id.action_donate_bitcoin: {
-                Helpers.get().showDonateBitcoinRequest();
+                Helpers.get().showDonateBitcoinRequest(R.string.donate__bitcoin_id, R.string.donate__bitcoin_amount, R.string.donate__bitcoin_amount, R.string.donate__bitcoin_url);
                 return true;
             }
             case R.id.action_homepage_additional: {
@@ -216,23 +215,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void loadWebapp(boolean doLogin) {
-        Uri url;
-        try {
-            url = Uri.parse(appSettings.getProfilePathFull());
-        } catch (Exception e) {
-            webView.loadData(getString(R.string.no_valid_path), "text/html", "UTF-16");
-            return;
-        }
-
-        String url_s = url.toString();
-        if (appSettings.isProfileEmpty()) {
-            webView.loadData(getString(R.string.no_valid_path), "text/html", "UTF-16");
-        } else {
-            webView.loadUrl(url_s);
-            if (doLogin) {
-                String postData = "username=" + appSettings.getProfileLoginUsername() + "&password=" + appSettings.getProfileLoginPassword() + "&login=login";
-                webView.postUrl(url_s, EncodingUtils.getBytes(postData, "base64"));
-            }
-        }
+        WawlOverrides.loadWebapp(webView, appSettings, doLogin);
     }
 }
