@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Some basics -->
+    <string name="settings">Impostazioni</string>
+    <string name="login">Accedi</string>
+    <string name="info">Informazioni</string>
+    <string name="exit">Esci</string>
+    <string name="reload">Ricarica</string>
+    <string name="username">Nome utente</string>
+    <string name="password">Password</string>
+    <string name="filename">Nome del file</string>
+    <string name="profile">Profilo</string>
+    <string name="changelog">Changelog</string>
+
+    <!-- Main -->
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Percorso non valido </h1></center></font> <font size="25"><br> Per favore controlla le tue impostazioni!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Certificato SSL non valido </h1></center></font><font size="25"> <br> È presente un opzione per accettare tutti i certificati SSL.<br><br><b> Attenzione:</b> Ignorare gli errori dei certificati può compromettere la sicurezza!</font>]]></string>
+    <string name="ssl_toast_error">Certificato SSL non accettato</string>
+    <string name="donate_bitcoin">Dona con i Bitcoin</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">Impostazioni generali</string>
+    <string name="pref_title__expert_settings">Impostazioni avanzate</string>
+    <string name="show_button_on_the_bottom">Mostra il bottone in basso</string>
+    <string name="no_data">Nessun dato</string>
+    <string name="enable_auto_login">Attiva l\'accesso automatico</string>
+    <string name="accept_all_ssl_certificates">Accetta tutti i certificati SSL</string>
+    <string name="profile_selection">Selezione Profilo</string>
+    <string name="profile_1">Profilo Predefinito</string>
+    <string name="profile_2">Profilo 2</string>
+    <string name="profile_3">Profilo 3</string>
+    <string name="path_domain_and_directory">Percorso (Protocollo, dominio, cartella)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Collaboratori</string>
+    <string name="project_team">Team del progetto</string>
+    <string name="licenses">Licenze</string>
+    <string name="show_app_license">Mostra la licenza dell\'app</string>
+    <string name="show_third_party_licenses">Mostra licenze di terze parti</string>
+    <string name="team">Team</string>
+    <string name="more_information">Più informazioni</string>
+</resources>
