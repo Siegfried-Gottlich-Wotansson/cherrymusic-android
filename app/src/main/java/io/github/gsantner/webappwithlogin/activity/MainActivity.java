@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         // Setup UI
         super.onCreate(savedInstanceState);
+        Helpers.get().setAppLanguage(AppSettings.get().getLanguage());
         setContentView(R.layout.main__activity);
         ButterKnife.bind(this);
         appSettings = AppSettings.get();
@@ -105,7 +106,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 HelpersA.get(this).showDialogWithHtmlTextView(R.string.licenses, html);
             } else if (appSettings.isAppCurrentVersionFirstStart()) {
                 mdParser.parse(
-                        getResources().openRawResource(R.raw.changelog), "");
+                        getResources().openRawResource(R.raw.changelog), "",
+                        SimpleMarkdownParser.FILTER_ANDROID_TEXTVIEW, SimpleMarkdownParser.FILTER_CHANGELOG);
                 HelpersA.get(this).showDialogWithHtmlTextView(R.string.changelog, mdParser.getHtml());
             }
 
@@ -198,7 +200,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (appSettings.isReloadRequired()) {
             recreate();
             return;
-
         }
         loadWebapp(appSettings.isProfileAutoLogin());
     }

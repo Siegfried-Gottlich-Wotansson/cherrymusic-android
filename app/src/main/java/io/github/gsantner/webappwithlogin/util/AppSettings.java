@@ -153,4 +153,8 @@ public class AppSettings extends AppSettingsBase {
         setInt(R.string.pref_key__app_selected_profile, index);
         loadSelectedProfile();
     }
+
+    public String getLanguage() {
+        return getString(R.string.pref_key__language, "");
+    }
 }

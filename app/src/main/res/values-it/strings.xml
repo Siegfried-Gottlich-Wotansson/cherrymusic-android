@@ -39,6 +39,6 @@
     <string name="licenses">Licenze</string>
     <string name="show_app_license">Mostra la licenza dell\'app</string>
     <string name="show_third_party_licenses">Mostra licenze di terze parti</string>
-    <string name="team">Team</string>
-    <string name="more_information">Più informazioni</string>
+    <string name="pref_desc__language">Cambia la lingua di questa app. Riavvia l\'app per rendere effettive le modifiche</string>
+    <string name="pref_title__language">Lingua</string>
 </resources>

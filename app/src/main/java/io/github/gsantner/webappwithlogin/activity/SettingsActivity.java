@@ -23,6 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
     @BindView(R.id.settings_toolbar)
     protected Toolbar toolbar;
 
+
     public void onCreate(Bundle b) {
         super.onCreate(b);
         setContentView(R.layout.settings__activity);
@@ -130,12 +131,17 @@ public class SettingsActivity extends AppCompatActivity {
 
             findPreference(getString(R.string.pref_key__app_selected_profile)).setSummary(selectedProfile);
 
-            appSettings.loadProfile(0);
-            findPreference(getString(R.string.profile_1)).setSummary(appSettings.getProfileSummary());
-            appSettings.loadProfile(1);
-            findPreference(getString(R.string.profile_2)).setSummary(appSettings.getProfileSummary());
-            appSettings.loadProfile(2);
-            findPreference(getString(R.string.profile_3)).setSummary(appSettings.getProfileSummary());
+            // Load summaries
+            int[] ids = new int[]{R.string.profile_1, R.string.profile_2, R.string.profile_3};
+            for (int i = 0; i < ids.length; i++) {
+                appSettings.loadProfile(i);
+                Preference pref = findPreference(getString(ids[i]));
+                if (pref != null) {
+                    pref.setSummary(appSettings.getProfileSummary());
+                }
+            }
+
+            appSettings.loadProfile(appSettings.getSelectedProfileNr());
         }
     }
 

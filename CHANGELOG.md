@@ -1,4 +1,8 @@
-### v1.3.7
+### v1.3.8
+- Added: Option to change app language
+- Updated: Changelog text and visuals
+
+### v1.3.3
 - Simplify shared code between Kimai TT and Cherry
 - New localization: Italian by @xDarkWolf
 - Update opoc

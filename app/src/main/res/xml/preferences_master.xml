@@ -15,6 +15,13 @@
             android:key="@string/pref_key__show_main_fab"
             android:title="@string/show_button_on_the_bottom" />
 
+        <!--suppress AndroidDomInspection -->
+        <io.github.gsantner.opoc.ui.LanguagePreference
+            android:defaultValue=""
+            android:key="@string/pref_key__language"
+            android:summary="@string/pref_desc__language"
+            android:title="@string/pref_title__language"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/profile">

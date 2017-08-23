@@ -9,8 +9,11 @@
     <string name="donate__bitcoin_message" translatable="false">Have some coke, and a nice day</string>
     <string name="donate__bitcoin_url" translatable="false">https://gsantner.github.io/donate/#donate</string>
 
-
     <string name="app_version_v" translatable="false">App Version  v%1$s</string>
+
+
+    <string name="team" translatable="false">Team</string>
+    <string name="more_information" translatable="false">More information</string>
 
     <!-- Aliases -->
     <string name="title_activity_settings" translatable="false">@string/settings</string>
@@ -32,4 +35,5 @@
     <string name="pref_key__profile_httpauth_password" translatable="false">pref_key__profile_httpauth_password</string>
     <string name="pref_key__show_main_fab" translatable="false">pref_key__show_main_fab</string>
     <string name="pref_key__app_reload_required" translatable="false">pref_key__app_reload_required</string>
+    <string name="pref_key__language" translatable="false">pref_key__language</string>
 </resources>

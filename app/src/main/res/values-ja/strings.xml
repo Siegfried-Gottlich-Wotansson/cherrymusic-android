@@ -21,4 +21,11 @@
     <string name="profile_2">プロファイル 2</string>
     <string name="profile_3">プロファイル 3</string>
     <string name="path_domain_and_directory">Kimai のパス</string>
-    </resources>
+    <string name="pref_desc__language">このアプリの言語を変更します。アプリを再起動すると変更を反映します</string>
+    <string name="pref_title__language">言語</string>
+    <string name="show_third_party_licenses">サードパーティ ライセンスを表示</string>
+    <string name="show_app_license">ライセンスを表示</string>
+    <string name="licenses">ライセンス</string>
+    <string name="contributors">貢献者</string>
+    <string name="changelog">変更履歴</string>
+</resources>
