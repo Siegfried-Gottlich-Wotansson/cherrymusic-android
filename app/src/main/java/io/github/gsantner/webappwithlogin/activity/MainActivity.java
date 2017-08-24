@@ -15,6 +15,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.HttpAuthHandler;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -70,10 +71,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().findItem(R.id.action_donate_bitcoin).setVisible(!BuildConfig.IS_GPLAY_BUILD);
-        ((TextView) navigationView.getHeaderView(0).findViewById(R.id.navheader_subtext))
-                .setText("v" + Helpers.get().getAppVersionName());
         fab.setVisibility(appSettings.isShowMainFab() ? View.VISIBLE : View.GONE);
         appSettings.setReloadRequired(false);
+
+        if (appSettings.isAppFirstStart(false)) {
+            appSettings.setShowMainFab(false);
+        }
 
         // Set web settings
         webView.setWebChromeClient(new WebChromeClient());
@@ -82,16 +85,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         webSettings.setDatabaseEnabled(true);
         webSettings.setDomStorageEnabled(true);
         webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false);
         webSettings.setSupportZoom(appSettings.isProfileLoadInDesktopMode());
         webSettings.setLoadWithOverviewMode(appSettings.isProfileLoadInDesktopMode());
         webSettings.setUseWideViewPort(appSettings.isProfileLoadInDesktopMode());
         webView.setWebViewClient(new WebViewClient() {
+            @Override
             public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
                 if (appSettings.isProfileAcceptAllSsl()) {
                     handler.proceed();
                 } else {
                     Snackbar.make(findViewById(android.R.id.content), R.string.ssl_toast_error, Snackbar.LENGTH_SHORT).show();
                     webView.loadData(getString(R.string.ssl_webview_error_str), "text/html", "UTF-16");
+                }
+            }
+
+            @Override
+            public void onReceivedHttpAuthRequest(WebView view, HttpAuthHandler handler, String host, String realm) {
+                if (appSettings.isProfileHttpBasicEnabled()) {
+                    handler.proceed(appSettings.getProfileHttpBasicAuthUsername(), appSettings.getProfileHttpBasicAuthPassword());
+                } else {
+                    handler.cancel();
                 }
             }
         });
@@ -201,6 +215,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             recreate();
             return;
         }
+        ((TextView) navigationView.getHeaderView(0).findViewById(R.id.navheader_subtext))
+                .setText(getResources().getStringArray(R.array.entries__profiles)[appSettings.getSelectedProfileNr()]);
         loadWebapp(appSettings.isProfileAutoLogin());
     }
 

@@ -27,7 +27,7 @@
     <string name="enable_auto_login">Attiva l\'accesso automatico</string>
     <string name="accept_all_ssl_certificates">Accetta tutti i certificati SSL</string>
     <string name="profile_selection">Selezione Profilo</string>
-    <string name="profile_1">Profilo Predefinito</string>
+    <string name="profile_1">Profilo 1</string>
     <string name="profile_2">Profilo 2</string>
     <string name="profile_3">Profilo 3</string>
     <string name="path_domain_and_directory">Percorso (Protocollo, dominio, cartella)</string>

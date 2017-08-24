@@ -4,35 +4,67 @@
 
         <EditTextPreference
             android:hint="@string/default_path_domain_and_folder"
+            android:icon="@drawable/ic_http_black_24dp"
             android:key="@string/pref_key__profile_path_domain_and_directory"
             android:title="@string/path_domain_and_directory" />
 
         <EditTextPreference
             android:defaultValue="@string/default_username"
             android:hint="@string/username"
+            android:icon="@drawable/ic_person_black_24dp"
             android:key="@string/pref_key__profile_login_username"
             android:title="@string/username" />
 
         <EditTextPreference
             android:hint="@string/password"
+            android:icon="@drawable/pd_password"
             android:inputType="textPassword"
             android:key="@string/pref_key__profile_login_password"
             android:title="@string/password" />
 
         <CheckBoxPreference
             android:defaultValue="true"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
             android:key="@string/pref_key__profile_autologin"
             android:title="@string/enable_auto_login" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/http_basic_auth">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_lock_black_24dp"
+            android:key="@string/pref_key__profile_enable_http_basic_auth"
+            android:title="@string/http_basic_auth" />
+
+        <EditTextPreference
+            android:dependency="@string/pref_key__profile_enable_http_basic_auth"
+            android:defaultValue="@string/default_username"
+            android:hint="@string/username"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:key="@string/pref_key__profile_login_username_basic"
+            android:title="@string/username" />
+
+        <EditTextPreference
+            android:dependency="@string/pref_key__profile_enable_http_basic_auth"
+            android:hint="@string/password"
+            android:icon="@drawable/pd_password"
+            android:inputType="textPassword"
+            android:key="@string/pref_key__profile_login_password_basic"
+            android:title="@string/password" />
+
 
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_title__expert_settings">
         <CheckBoxPreference
             android:defaultValue="false"
+            android:icon="@drawable/ic_report_problem_black_24dp"
             android:key="@string/pref_key__profile_accept_all_ssl_certs"
             android:title="@string/accept_all_ssl_certificates" />
         <EditTextPreference
             android:hint="@string/default_path_filename"
+            android:icon="@drawable/ic_http_black_24dp"
             android:key="@string/pref_key__profile_path_filename"
             android:title="@string/filename" />
 

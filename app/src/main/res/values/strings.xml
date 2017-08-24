@@ -27,7 +27,7 @@
     <string name="enable_auto_login">Enable auto-login</string>
     <string name="accept_all_ssl_certificates">Accept all SSL certificates</string>
     <string name="profile_selection">Profile Selection</string>
-    <string name="profile_1">Default Profile</string>
+    <string name="profile_1">Profile 1</string>
     <string name="profile_2">Profile 2</string>
     <string name="profile_3">Profile 3</string>
     <string name="path_domain_and_directory">Path (Protocol, domain, folder)</string>

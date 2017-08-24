@@ -1,7 +1,7 @@
 #!/bin/bash
 #########################################################
 #
-#   Title
+#   Package name replacer
 #
 #   Created by Gregor Santer (gsantner), 2017
 #   https://gsantner.github.io/
@@ -17,11 +17,8 @@ SCRIPTDIRPARENT="$(dirname "$SCRIPTDIR")"
 argc=$#
 
 #########################################################
-# INSERT SCRIPT HERE
 cd "$SCRIPTPATH"
 
 packageName=`cat wawl/AndroidManifest.xml | grep "package=" | cut -d '"' -f 2 | sed 's#\.#\\\.#g'`
 find wawl app -type f -iname "*.java" -exec sed -i "s/import .*\.R;/import $packageName.R;/g" -i "{}" \;
 find wawl app -type f -iname "*.java" -exec sed -i "s/import .*\.BuildConfig;/import $packageName.BuildConfig;/g" -i "{}" \;
-
-#########################################################

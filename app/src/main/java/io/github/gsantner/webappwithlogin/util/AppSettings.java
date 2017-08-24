@@ -133,12 +133,16 @@ public class AppSettings extends AppSettingsBase {
         setBool(prefCurrentProfile, R.string.pref_key__profile_load_in_desktop_mode, value);
     }
 
-    public String getProfileHttpAuthUsername() {
-        return getString(prefCurrentProfile, R.string.pref_key__profile_httpauth_username, rstr(R.string.default_username));
+    public boolean isProfileHttpBasicEnabled() {
+        return getBool(prefCurrentProfile, R.string.pref_key__profile_enable_http_basic_auth, false);
     }
 
-    public String getProfileHttpAuthPassword() {
-        return getString(prefCurrentProfile, R.string.pref_key__profile_httpauth_password, "");
+    public String getProfileHttpBasicAuthUsername() {
+        return getString(prefCurrentProfile, R.string.pref_key__profile_login_username_basic, rstr(R.string.default_username));
+    }
+
+    public String getProfileHttpBasicAuthPassword() {
+        return getString(prefCurrentProfile, R.string.pref_key__profile_login_password_basic, "");
     }
 
     public void setProfileLoginUsername(String value) {
@@ -156,5 +160,9 @@ public class AppSettings extends AppSettingsBase {
 
     public String getLanguage() {
         return getString(R.string.pref_key__language, "");
+    }
+
+    public void setShowMainFab(boolean value) {
+        setBool(_prefApp, R.string.pref_key__show_main_fab, value);
     }
 }

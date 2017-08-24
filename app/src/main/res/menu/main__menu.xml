@@ -8,7 +8,7 @@
 
         <item
             android:id="@+id/action_login"
-            android:icon="@drawable/ic_refresh_white_48px"
+            android:icon="@drawable/ic_arrow_forward_black_24dp"
             android:title="@string/login"/>
 
         <item

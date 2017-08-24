@@ -22,7 +22,7 @@
 <string name="enable_auto_login">Auto-Login einschalten</string>
     <string name="accept_all_ssl_certificates">Alle SSL Zertifikate akzeptieren</string>
     <string name="profile_selection">Profil Auswahl</string>
-    <string name="profile_1">Standard Profil</string>
+    <string name="profile_1">Profil 1</string>
     <string name="profile_2">Profil 2</string>
     <string name="profile_3">Profil 3</string>
     <string name="path_domain_and_directory">Pfad (Protokoll, Domain, Ordner)</string>

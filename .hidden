@@ -4,6 +4,14 @@ gradle.properties
 gradlew
 gradlew.bat
 local.properties
-memetastic.iml
 settings.gradle
+
+CODE_OF_CONDUCT.md
+
+memetastic.iml
+cherrymusic-android.iml
+kimai-android.iml
+dandelion.iml
+froody-android.iml
+
 replacePackageName.sh

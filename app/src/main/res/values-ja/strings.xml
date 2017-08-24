@@ -17,7 +17,7 @@
     <string name="enable_auto_login">自動ログインを有効にする</string>
     <string name="accept_all_ssl_certificates">すべての SSL 証明書を受け入れる</string>
     <string name="profile_selection">プロファイルの選択</string>
-    <string name="profile_1">デフォルト</string>
+    <string name="profile_1">プロファイル 1</string>
     <string name="profile_2">プロファイル 2</string>
     <string name="profile_3">プロファイル 3</string>
     <string name="path_domain_and_directory">Kimai のパス</string>
