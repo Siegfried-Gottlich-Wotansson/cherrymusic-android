@@ -1,3 +1,6 @@
+### v1.3.10
+- Fixed: Language list when building outside of project root
+
 ### v1.3.9
 - Updated: Project icon
 - Added: HTTP basic auth login support
