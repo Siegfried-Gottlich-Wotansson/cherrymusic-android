@@ -29,30 +29,30 @@ public class AppSettings extends AppSettingsBase {
     //############################################
 
     public boolean isAppFirstStart(boolean doSet) {
-        boolean value = getBool(_prefApp, R.string.pref_key__app_first_start, true);
+        boolean value = getBool(R.string.pref_key__app_first_start, true);
         if (doSet) {
-            setBool(_prefApp, R.string.pref_key__app_first_start, false);
+            setBool(R.string.pref_key__app_first_start, false);
         }
         return value;
     }
 
     @SuppressWarnings("ConstantConditions")
     public boolean isAppCurrentVersionFirstStart() {
-        int value = getInt(_prefApp, R.string.pref_key__app_first_start_current_version, -1);
-        setInt(_prefApp, R.string.pref_key__app_first_start_current_version, BuildConfig.VERSION_CODE);
+        int value = getInt(R.string.pref_key__app_first_start_current_version, -1);
+        setInt(R.string.pref_key__app_first_start_current_version, BuildConfig.VERSION_CODE);
         return value != BuildConfig.VERSION_CODE && !BuildConfig.IS_TEST_BUILD;
     }
 
     public boolean isShowMainFab() {
-        return getBool(_prefApp, R.string.pref_key__show_main_fab, true);
+        return getBool(R.string.pref_key__show_main_fab, true);
     }
 
     public boolean isReloadRequired() {
-        return getBool(_prefApp, R.string.pref_key__app_reload_required, false);
+        return getBool(R.string.pref_key__app_reload_required, false);
     }
 
     public void setReloadRequired(boolean value) {
-        setBool(_prefApp, R.string.pref_key__app_reload_required, value);
+        setBool(R.string.pref_key__app_reload_required, value);
     }
 
     public SharedPreferences getSharedPreferenceCurrentProfile() {
@@ -87,7 +87,7 @@ public class AppSettings extends AppSettingsBase {
     }
 
     public String getProfilePathDomainAndDirectory() {
-        String ret = getString(prefCurrentProfile, R.string.pref_key__profile_path_domain_and_directory, "");
+        String ret = getString(R.string.pref_key__profile_path_domain_and_directory, "", prefCurrentProfile);
         if (!TextUtils.isEmpty(ret) && ret.endsWith("/")) {
             ret = ret.substring(0, ret.length() - 1);
             setProfilePathDomainAndDirectory(ret);
@@ -102,55 +102,55 @@ public class AppSettings extends AppSettingsBase {
     }
 
     public void setProfilePathDomainAndDirectory(String value) {
-        setString(prefCurrentProfile, R.string.pref_key__profile_path_domain_and_directory, value);
+        setString(R.string.pref_key__profile_path_domain_and_directory, value, prefCurrentProfile);
     }
 
     public String getProfilePathFilename() {
-        return getString(prefCurrentProfile, R.string.pref_key__profile_path_filename, rstr(R.string.default_path_filename));
+        return getString(R.string.pref_key__profile_path_filename, rstr(R.string.default_path_filename), prefCurrentProfile);
     }
 
     public String getProfileLoginUsername() {
-        return getString(prefCurrentProfile, R.string.pref_key__profile_login_username, rstr(R.string.default_username));
+        return getString(R.string.pref_key__profile_login_username, rstr(R.string.default_username), prefCurrentProfile);
     }
 
     public String getProfileLoginPassword() {
-        return getString(prefCurrentProfile, R.string.pref_key__profile_login_password, "");
+        return getString(R.string.pref_key__profile_login_password, "", prefCurrentProfile);
     }
 
     public boolean isProfileAutoLogin() {
-        return getBool(prefCurrentProfile, R.string.pref_key__profile_autologin, true);
+        return getBool(R.string.pref_key__profile_autologin, true, prefCurrentProfile);
     }
 
     public boolean isProfileAcceptAllSsl() {
-        return getBool(prefCurrentProfile, R.string.pref_key__profile_accept_all_ssl_certs, false);
+        return getBool(R.string.pref_key__profile_accept_all_ssl_certs, false, prefCurrentProfile);
     }
 
     public boolean isProfileLoadInDesktopMode() {
-        return getBool(prefCurrentProfile, R.string.pref_key__profile_load_in_desktop_mode, true);
+        return getBool(R.string.pref_key__profile_load_in_desktop_mode, true, prefCurrentProfile);
     }
 
     public void setProfileLoadInDesktopMode(boolean value) {
-        setBool(prefCurrentProfile, R.string.pref_key__profile_load_in_desktop_mode, value);
+        setBool(R.string.pref_key__profile_load_in_desktop_mode, value, prefCurrentProfile);
     }
 
     public boolean isProfileHttpBasicEnabled() {
-        return getBool(prefCurrentProfile, R.string.pref_key__profile_enable_http_basic_auth, false);
+        return getBool(R.string.pref_key__profile_enable_http_basic_auth, false, prefCurrentProfile);
     }
 
     public String getProfileHttpBasicAuthUsername() {
-        return getString(prefCurrentProfile, R.string.pref_key__profile_login_username_basic, rstr(R.string.default_username));
+        return getString(R.string.pref_key__profile_login_username_basic, rstr(R.string.default_username), prefCurrentProfile);
     }
 
     public String getProfileHttpBasicAuthPassword() {
-        return getString(prefCurrentProfile, R.string.pref_key__profile_login_password_basic, "");
+        return getString(R.string.pref_key__profile_login_password_basic, "", prefCurrentProfile);
     }
 
     public void setProfileLoginUsername(String value) {
-        setString(prefCurrentProfile, R.string.pref_key__profile_login_username, value);
+        setString(R.string.pref_key__profile_login_username, value, prefCurrentProfile);
     }
 
     public void getProfileLoginPassword(String value) {
-        setString(prefCurrentProfile, R.string.pref_key__profile_login_password, value);
+        setString(R.string.pref_key__profile_login_password, value, prefCurrentProfile);
     }
 
     public void selectProfile(int index) {
@@ -163,6 +163,6 @@ public class AppSettings extends AppSettingsBase {
     }
 
     public void setShowMainFab(boolean value) {
-        setBool(_prefApp, R.string.pref_key__show_main_fab, value);
+        setBool(R.string.pref_key__show_main_fab, value);
     }
 }
