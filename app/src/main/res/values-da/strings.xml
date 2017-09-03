@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Indstillinger</string>
+    <string name="login">Login</string>
+    <string name="info">Om</string>
+    <string name="exit">Afslut</string>
+    <string name="reload">Genindlæs</string>
+    <string name="username">Brugernavn</string>
+    <string name="password">Kodeord</string>
+    <string name="filename">Filenavn</string>
+    <string name="profile">Profil</string>
+    <string name="changelog">Ændringslog</string>
+
+    <!-- Main -->
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Ingen gyldig sti </h1></center></font> <font size="25"><br> Vær sød at checke dine indstilinger!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Ugyldig SSL certifikat </h1></center></font><font size="25"> <br> Der er mulighed for at acceptere alle SSL-certifikater.<br><br><b> Caution:</b> At ignorere certifikatfejl er en sikkerhedsrisiko!</font>]]></string>
+    <string name="ssl_toast_error">SSL certifikat er en sikkerhedsrisiko</string>
+    <string name="donate_bitcoin">Donere Bitcoin</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">General settings</string>
+    <string name="pref_title__expert_settings">Expert settings</string>
+    <string name="show_button_on_the_bottom">Show button on the bottom</string>
+    <string name="no_data">No data</string>
+    <string name="enable_auto_login">Enable auto-login</string>
+    <string name="accept_all_ssl_certificates">Accept all SSL certificates</string>
+    <string name="profile_selection">Profile Selection</string>
+    <string name="profile_1">Profile 1</string>
+    <string name="profile_2">Profile 2</string>
+    <string name="profile_3">Profile 3</string>
+    <string name="path_domain_and_directory">Path (Protocol, domain, folder)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Contributors</string>
+    <string name="project_team">Project team</string>
+    <string name="licenses">Licenses</string>
+    <string name="show_app_license">Show license of the app</string>
+    <string name="show_third_party_licenses">Show 3rd party licenses</string>
+    <string name="pref_title__language">Language</string>
+    <string name="pref_desc__language">Change language of this app. Restart app for changes to take effect</string>
+</resources>
