@@ -6,7 +6,7 @@ import android.text.TextUtils;
 
 import de.live.gdev.cherrymusic.BuildConfig;
 import de.live.gdev.cherrymusic.R;
-import io.github.gsantner.opoc.util.AppSettingsBase;
+import net.gsantner.opoc.util.AppSettingsBase;
 import io.github.gsantner.webappwithlogin.App;
 
 public class AppSettings extends AppSettingsBase {

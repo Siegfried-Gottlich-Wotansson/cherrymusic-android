@@ -16,12 +16,12 @@ import android.content.Context;
 import io.github.gsantner.webappwithlogin.App;
 
 @SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue", "SpellCheckingInspection"})
-public class Helpers extends io.github.gsantner.opoc.util.Helpers {
-    public Helpers(Context context) {
+public class ContextUtils extends net.gsantner.opoc.util.ContextUtils {
+    public ContextUtils(Context context) {
         super(context);
     }
 
-    public static Helpers get() {
-        return new Helpers(App.get());
+    public static ContextUtils get() {
+        return new ContextUtils(App.get());
     }
 }

@@ -15,6 +15,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.HttpAuthHandler;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
@@ -31,10 +32,11 @@ import butterknife.OnClick;
 import butterknife.OnLongClick;
 import de.live.gdev.cherrymusic.BuildConfig;
 import de.live.gdev.cherrymusic.R;
-import io.github.gsantner.opoc.util.SimpleMarkdownParser;
+
+import net.gsantner.opoc.util.ActivityUtils;
+import net.gsantner.opoc.util.SimpleMarkdownParser;
 import io.github.gsantner.webappwithlogin.util.AppSettings;
-import io.github.gsantner.webappwithlogin.util.Helpers;
-import io.github.gsantner.webappwithlogin.util.HelpersA;
+import io.github.gsantner.webappwithlogin.util.ContextUtils;
 import wawl.WawlOverrides;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -62,10 +64,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         // Setup UI
         super.onCreate(savedInstanceState);
-        Helpers.get().setAppLanguage(AppSettings.get().getLanguage());
+        ContextUtils.get().setAppLanguage(AppSettings.get().getLanguage());
         setContentView(R.layout.main__activity);
         ButterKnife.bind(this);
         appSettings = AppSettings.get();
+
+
+
+        WindowManager.LayoutParams attrs = getWindow().getAttributes();
+        attrs.flags ^= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        getWindow().setAttributes(attrs);
 
         // Setup bars
         setSupportActionBar(toolbar);
@@ -117,12 +125,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 String html = mdParser.parse(getString(R.string.copyright_license_text_official).replace("\n", "  \n"), "").getHtml();
                 html += mdParser.parse(getResources().openRawResource(R.raw.licenses_3rd_party), "").getHtml();
 
-                HelpersA.get(this).showDialogWithHtmlTextView(R.string.licenses, html);
+                new ActivityUtils(this).showDialogWithHtmlTextView(R.string.licenses, html);
             } else if (appSettings.isAppCurrentVersionFirstStart()) {
                 mdParser.parse(
                         getResources().openRawResource(R.raw.changelog), "",
                         SimpleMarkdownParser.FILTER_ANDROID_TEXTVIEW, SimpleMarkdownParser.FILTER_CHANGELOG);
-                HelpersA.get(this).showDialogWithHtmlTextView(R.string.changelog, mdParser.getHtml());
+                new ActivityUtils(this).showDialogWithHtmlTextView(R.string.changelog, mdParser.getHtml());
             }
 
         } catch (IOException e) {
@@ -152,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean handleBarClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings: {
-                HelpersA.get(this).animateToActivity(SettingsActivity.class, false, null);
+                new ActivityUtils(this).animateToActivity(SettingsActivity.class, false, null);
                 return true;
             }
             case R.id.action_login: {
@@ -176,19 +184,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
             case R.id.action_reload: {
+
+                WindowManager.LayoutParams attrs = getWindow().getAttributes();
+                attrs.flags ^= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+                getWindow().setAttributes(attrs);
                 webView.reload();
                 return true;
             }
             case R.id.action_donate_bitcoin: {
-                Helpers.get().showDonateBitcoinRequest(R.string.donate__bitcoin_id, R.string.donate__bitcoin_amount, R.string.donate__bitcoin_amount, R.string.donate__bitcoin_url);
+                ContextUtils.get().showDonateBitcoinRequest(R.string.donate__bitcoin_id, R.string.donate__bitcoin_amount, R.string.donate__bitcoin_amount, R.string.donate__bitcoin_url);
                 return true;
             }
             case R.id.action_homepage_additional: {
-                Helpers.get().openWebpageInExternalBrowser(getString(R.string.page_additional_homepage));
+                ContextUtils.get().openWebpageInExternalBrowser(getString(R.string.page_additional_homepage));
                 return true;
             }
             case R.id.action_homepage_author: {
-                Helpers.get().openWebpageInExternalBrowser(getString(R.string.page_author));
+                ContextUtils.get().openWebpageInExternalBrowser(getString(R.string.page_author));
                 return true;
             }
         }
