@@ -9,11 +9,11 @@
  *  http://creativecommons.org/publicdomain/zero/1.0/
  * ----------------------------------------------------------------------------
  */
-package io.github.gsantner.webappwithlogin.util;
+package net.gsantner.webappwithlogin.util;
 
 import android.content.Context;
 
-import io.github.gsantner.webappwithlogin.App;
+import net.gsantner.webappwithlogin.App;
 
 @SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue", "SpellCheckingInspection"})
 public class ContextUtils extends net.gsantner.opoc.util.ContextUtils {

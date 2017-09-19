@@ -7,8 +7,8 @@ import android.webkit.WebView;
 import org.apache.http.util.EncodingUtils;
 
 import de.live.gdev.cherrymusic.R;
-import io.github.gsantner.webappwithlogin.App;
-import io.github.gsantner.webappwithlogin.util.AppSettings;
+import net.gsantner.webappwithlogin.App;
+import net.gsantner.webappwithlogin.util.AppSettings;
 
 public class WawlOverrides {
     public static void loadWebapp(WebView webView, AppSettings appSettings, boolean doLogin) {

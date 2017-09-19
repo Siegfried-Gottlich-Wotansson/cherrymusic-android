@@ -1,4 +1,4 @@
-package io.github.gsantner.webappwithlogin.util;
+package net.gsantner.webappwithlogin.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import de.live.gdev.cherrymusic.BuildConfig;
 import de.live.gdev.cherrymusic.R;
 import net.gsantner.opoc.util.AppSettingsBase;
-import io.github.gsantner.webappwithlogin.App;
+import net.gsantner.webappwithlogin.App;
 
 public class AppSettings extends AppSettingsBase {
     private SharedPreferences prefCurrentProfile;

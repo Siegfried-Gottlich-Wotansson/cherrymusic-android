@@ -1,8 +1,8 @@
-package io.github.gsantner.webappwithlogin;
+package net.gsantner.webappwithlogin;
 
 import android.app.Application;
 
-import io.github.gsantner.webappwithlogin.util.AppSettings;
+import net.gsantner.webappwithlogin.util.AppSettings;
 import wawl.WawlOverrides;
 
 public class App extends Application {

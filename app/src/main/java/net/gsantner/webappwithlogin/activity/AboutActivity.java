@@ -17,7 +17,7 @@
  * Intended to use together: SimpleMarkdownParser, ContextUtils, AboutActivity and it's xml-layout.
  */
 
-package io.github.gsantner.webappwithlogin.activity;
+package net.gsantner.webappwithlogin.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -39,7 +39,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.live.gdev.cherrymusic.R;
-import io.github.gsantner.webappwithlogin.util.ContextUtils;
+import net.gsantner.webappwithlogin.util.ContextUtils;
 
 @SuppressWarnings("unused")
 public class AboutActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package io.github.gsantner.webappwithlogin.activity;
+package net.gsantner.webappwithlogin.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -35,8 +35,8 @@ import de.live.gdev.cherrymusic.R;
 
 import net.gsantner.opoc.util.ActivityUtils;
 import net.gsantner.opoc.util.SimpleMarkdownParser;
-import io.github.gsantner.webappwithlogin.util.AppSettings;
-import io.github.gsantner.webappwithlogin.util.ContextUtils;
+import net.gsantner.webappwithlogin.util.AppSettings;
+import net.gsantner.webappwithlogin.util.ContextUtils;
 import wawl.WawlOverrides;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
