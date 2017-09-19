@@ -22,8 +22,8 @@ android {
         minSdkVersion version_sdk.minSdk
         targetSdkVersion version_sdk.targetSdk
 
-        versionCode 12
-        versionName "1.3.9"
+        versionCode 13
+        versionName "1.3.10"
 
         applicationId "de.live.gdev.cherrymusic"
 
@@ -49,7 +49,7 @@ android {
         }
 
         flavorTest {
-            applicationId "de.live.gdev.cherrymusic.test"
+            applicationId "net.gsantner.cherrymusic_test"
             versionCode = Integer.parseInt(new Date().format('yyMMdd'))
             versionName = new Date().format('yyMMdd')
             buildConfigField "boolean", "IS_TEST_BUILD", "true"
