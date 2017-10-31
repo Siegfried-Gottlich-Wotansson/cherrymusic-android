@@ -14,9 +14,9 @@
 
     <!-- Main -->
     <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> No valid path </h1></center></font> <font size="25"><br> Please check your settings!</font>]]></string>
-    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Invalid SSL certificate </h1></center></font><font size="25"> <br> There is a option for accecpting all SSL certificates.<br><br><b> Caution:</b> Ignoring certificate errors is a security risk!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Invalid SSL certificate </h1></center></font><font size="25"> <br> There is a option for accepting all SSL certificates.<br><br><b> Caution:</b> Ignoring certificate errors is a security risk!</font>]]></string>
     <string name="ssl_toast_error">SSL certificate not accepted</string>
-    <string name="donate_bitcoin">Donate Bitcoin</string>
+    <string name="donate">Donate</string>
 
 
     <!-- Settings -->

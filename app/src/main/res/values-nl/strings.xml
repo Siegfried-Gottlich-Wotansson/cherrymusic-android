@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Some basics -->
+    <string name="settings">Instellingen</string>
+    <string name="login">Inloggen</string>
+    <string name="info">Over</string>
+    <string name="exit">Afsluiten</string>
+    <string name="reload">Verversen</string>
+    <string name="username">Gebruikersnaam</string>
+    <string name="password">Wachtwoord</string>
+    <string name="filename">Bestandsnaam</string>
+    <string name="profile">Profiel</string>
+    <string name="changelog">Wijzigingen</string>
+
+    <!-- Main -->
+    <string name="no_valid_path">&lt;font size=\"38\"&gt;&lt;center&gt;&lt;h1&gt; Geen geldige map &lt;/h1&gt;&lt;/center&gt;&lt;/font&gt; &lt;font size=\"25\"&gt;&lt;br&gt; Controleer alsjeblieft je instellingen!&lt;/font&gt;</string>
+    <string name="ssl_webview_error_str">&lt;font size=\"38\"&gt;&lt;center&gt;&lt;h1&gt; Ongeldig SSL certificaat&lt;/h1&gt;&lt;/center&gt;&lt;/font&gt;&lt;font size=\"25\"&gt; &lt;br&gt; Er is een optie voor het accepteren van alle SSL certificaten.&lt;br&gt;&lt;br&gt;&lt;b&gt; Waarschuwing:&lt;/b&gt; Get negeren van certificaat fouten is een beveiligingsrisico!&lt;/font&gt;</string>
+    <string name="ssl_toast_error">SSL certificaat niet geaccepteerd</string>
+    <string name="donate">Doneer</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">Algemene instellingen</string>
+    <string name="pref_title__expert_settings">Gevorderde instellingen</string>
+    <string name="show_button_on_the_bottom">Laat knop onderaan zien</string>
+    <string name="no_data">Geen gegevens</string>
+    <string name="enable_auto_login">Zet automatisch inloggen aan</string>
+    <string name="accept_all_ssl_certificates">Accepteer alle SSL certificaten</string>
+    <string name="profile_selection">Profiel selectie</string>
+    <string name="profile_1">Profiel 1</string>
+    <string name="profile_2">Profiel 2</string>
+    <string name="profile_3">Profiel 3</string>
+    <string name="path_domain_and_directory">Map (Protocol, domein, folder)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Bijdragers</string>
+    <string name="project_team">Projectteam</string>
+    <string name="licenses">Licenties</string>
+    <string name="show_app_license">Bekijk licentie van de app</string>
+    <string name="show_third_party_licenses">Laat licenties van derden zien</string>
+    <string name="pref_title__language">Taal</string>
+    <string name="pref_desc__language">Wijzig taalinstelling van deze app. Herstart de app om wijzigingen toe te passen</string>
+</resources>

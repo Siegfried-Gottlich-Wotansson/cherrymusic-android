@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Some basics -->
+    <string name="settings">Configuración</string>
+    <string name="login">Login</string>
+    <string name="info">Acerca de</string>
+    <string name="exit">Salir</string>
+    <string name="reload">Recargar</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="filename">Nombre de archivo</string>
+    <string name="profile">Perfil</string>
+    <string name="changelog">Registro de cambios</string>
+
+    <!-- Main -->
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Ruta no válida </h1></center></font> <font size="25"><br> Por favor, compruebe las opciones de configuración!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Certificado SSL no válido </h1></center></font><font size="25"> <br> Existe una opción para aceptar todos los certificados SSL.<br><br><b> Caution:</b> Ignorar los errores de certificados es un riesgo de seguridad!</font>]]></string>
+    <string name="ssl_toast_error">Certificado SSL no acceptado</string>
+    <string name="donate">Donar</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">Configuración general</string>
+    <string name="pref_title__expert_settings">Configuración avanzada</string>
+    <string name="show_button_on_the_bottom">Muestra botón abajo</string>
+    <string name="no_data">Sin datos</string>
+    <string name="enable_auto_login">Habilitar inicio de sesión automático</string>
+    <string name="accept_all_ssl_certificates">Aceptar todos los certificados SSL</string>
+    <string name="profile_selection">Seleción de perfil</string>
+    <string name="profile_1">Perfil 1</string>
+    <string name="profile_2">Perfil 2</string>
+    <string name="profile_3">Perfil 3</string>
+    <string name="path_domain_and_directory">Ruta (Protocolo, dominio, carpeta)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Contribuidores</string>
+    <string name="project_team">Equipo del proyecto</string>
+    <string name="licenses">Licencias</string>
+    <string name="show_app_license">Mostrar licencia de la aplicación</string>
+    <string name="show_third_party_licenses">Mostrar licencias de terceros</string>
+    <string name="pref_title__language">Idioma</string>
+    <string name="pref_desc__language">Cambiar idioma de la aplicación. Reiniciar para que los cambios sean efectivos</string>
+</resources>

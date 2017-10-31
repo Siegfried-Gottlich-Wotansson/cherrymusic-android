@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Some basics -->
+    <string name="settings">Налаштування</string>
+    <string name="login">Вхід</string>
+    <string name="info">Інформація</string>
+    <string name="exit">Вихід</string>
+    <string name="reload">Перезавантажити</string>
+    <string name="username">Ім’я користувача</string>
+    <string name="password">Пароль</string>
+    <string name="filename">Ім’я файлу</string>
+    <string name="profile">Профіль</string>
+    <string name="changelog">Список змін</string>
+
+    <!-- Main -->
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Немає дійсного шляху </h1></center></font> <font size="25"><br> Будь ласка, перевірте налаштування!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Недійсний SSL сертифікат </h1></center></font><font size="25"> <br> Існує опція для встановлення всіх SSL сертифікатів.<br><br><b> Увага:</b> Ігнорування помилок сертифікатів - ризик для безпеки!</font>]]></string>
+    <string name="ssl_toast_error">SSL сертифікати не встановлені</string>
+    <string name="donate">Пожертвувати</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">Основні налаштування</string>
+    <string name="pref_title__expert_settings">Розширені налаштування</string>
+    <string name="show_button_on_the_bottom">Показувати кнопку</string>
+    <string name="no_data">Дані відсутні</string>
+    <string name="enable_auto_login">Включити авто-вхід</string>
+    <string name="accept_all_ssl_certificates">Установити всі SSL сертифікати</string>
+    <string name="profile_selection">Вибір Профілю</string>
+    <string name="profile_1">Профіль 1</string>
+    <string name="profile_2">Профіль 2</string>
+    <string name="profile_3">Профіль 3</string>
+    <string name="path_domain_and_directory">Шлях (Протокол, домен, папка)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Проект підтримали</string>
+    <string name="project_team">Команда проекту</string>
+    <string name="licenses">Ліцензії</string>
+    <string name="show_app_license">Показати ліцензію додатку</string>
+    <string name="show_third_party_licenses">Показати згоду третьої особи</string>
+    <string name="pref_title__language">Мова</string>
+    <string name="pref_desc__language">Змінити мову додатку. Для того, щоб зміни вступили в силу, необхідно перезавантажитись.</string>
+</resources>

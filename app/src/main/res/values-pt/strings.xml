@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Some basics -->
+    <string name="settings">Configurações</string>
+    <string name="login">Login</string>
+    <string name="info">Sobre</string>
+    <string name="exit">Sair</string>
+    <string name="reload">Recarregar</string>
+    <string name="username">Nome de usuário</string>
+    <string name="password">Senha</string>
+    <string name="filename">Nome do arquivo</string>
+    <string name="profile">Perfil</string>
+    <string name="changelog">Registos de alterações</string>
+
+    <!-- Main -->
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> No valid path </h1></center></font> <font size="25"><br> Please check your settings!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Invalid SSL certificate </h1></center></font><font size="25"> <br> There is a option for accepting all SSL certificates.<br><br><b> Caution:</b> Ignoring certificate errors is a security risk!</font>]]></string>
+    <string name="ssl_toast_error">Certificado SSL não aceito</string>
+    <string name="donate">Doar</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">Configurações gerais</string>
+    <string name="pref_title__expert_settings">Configurações avançadas</string>
+    <string name="show_button_on_the_bottom">Mostrar botão na parte inferior</string>
+    <string name="no_data">Sem dados</string>
+    <string name="enable_auto_login">Habilitar login automático</string>
+    <string name="accept_all_ssl_certificates">Aceitar todos os certificados SSL</string>
+    <string name="profile_selection">Seleção de perfil</string>
+    <string name="profile_1">Perfil 1</string>
+    <string name="profile_2">Perfil 2</string>
+    <string name="profile_3">Perfil 3</string>
+    <string name="path_domain_and_directory">Caminho (protocolo, domínio, pasta)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Contribuidores</string>
+    <string name="project_team">Equipe do projeto</string>
+    <string name="licenses">Licenças</string>
+    <string name="show_app_license">Exibir licença do aplicativo</string>
+    <string name="show_third_party_licenses">Exibir licenças de terceiros</string>
+    <string name="pref_title__language">Linguagem</string>
+    <string name="pref_desc__language">Mudar linguagem do aplicativo. Reinicie o aplicativo para aplicar a alteração</string>
+</resources>

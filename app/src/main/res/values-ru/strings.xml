@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Some basics -->
-    <string name="settings">Натсройки</string>
+    <string name="settings">Настройки</string>
     <string name="login">Вход</string>
-    <string name="info">Инфо</string>
-    <string name="exit">Выхрд</string>
+    <string name="info">Информация</string>
+    <string name="exit">Выход</string>
     <string name="reload">Перезагрузить</string>
     <string name="username">Имя пользователя</string>
     <string name="password">Пароль</string>
@@ -16,7 +16,7 @@
     <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Нет действительного пути </h1></center></font> <font size="25"><br> Пожалуйста, проверьте настройки!</font>]]></string>
     <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Недействительный SSL сертификат </h1></center></font><font size="25"> <br> Есть опция для установки всех SSL сертификатов.<br><br><b> Внимание:</b> Игнорирование ошибок сертификатов - риск для безопасности!</font>]]></string>
     <string name="ssl_toast_error">SSL сертификаты не установлены</string>
-    <string name="donate_bitcoin">Пожертвовать Bitcoin\'ов</string>
+    <string name="donate">Пожертвовать</string>
 
 
     <!-- Settings -->

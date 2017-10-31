@@ -3,16 +3,15 @@
     <string name="settings">設定</string>
     <string name="login">ログイン</string>
     <string name="info">アプリについて</string>
-
     <string name="exit">ログアウトして終了</string>
+    <string name="reload">リロード</string>
     <string name="username">ユーザー名</string>
     <string name="password">パスワード</string>
     <string name="filename">ファイル名</string>
     <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> パスが無効です </h1></center></font> <font size="25"><br> 設定を確認してください!</font>]]></string>
     <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> SSL 証明書が無効です </h1></center></font><font size="25"> <br> すべての SSL 証明書を受け入れるオプションがあります。<br><br><b> 注意:</b> 証明書のエラーを無視することはセキュリティリスクがあります!</font>]]></string>
     <string name="ssl_toast_error">SSL 証明書が受け入れられません</string>
-
-    <string name="donate_bitcoin">Bitcoin で寄付</string>
+    <string name="donate">で寄付</string>
 
     <string name="enable_auto_login">自動ログインを有効にする</string>
     <string name="accept_all_ssl_certificates">すべての SSL 証明書を受け入れる</string>
@@ -28,4 +27,10 @@
     <string name="licenses">ライセンス</string>
     <string name="contributors">貢献者</string>
     <string name="changelog">変更履歴</string>
+    <string name="no_data">データなし</string>
+    <string name="profile">プロファイル</string>
+    <string name="project_team">プロジェクトチーム</string>
+    <string name="pref_title__general_settings">一般設定</string>
+    <string name="pref_title__expert_settings">高度な設定</string>
+    <string name="show_button_on_the_bottom">下のボタンを表示</string>
 </resources>

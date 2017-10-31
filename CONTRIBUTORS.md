@@ -14,8 +14,9 @@ Where:
 
 ## LIST OF CONTRIBUTORS
 -->
-* **[Gregor Santner](https://gsantner.github.io)**<br/>~° Current developer of Cherry Android
+* **[Gregor Santner](https://gsantner.github.io)**<br/>~° Current developer of Kimai TimeTracker
 * **[Naofumi Fukue](https://github.com/naofum)**<br/>~° Japanese translation
 * **[Poussinou](https://github.com/Poussinou)**<br/>~° French translation
 * **[xDarkWolf](https://github.com/xDarkWolf)**<br/>~° Italian translation
 * **[Victor Fisker](https://discord.gg/49dwg58)**<br/>~° Danish translation
+* **[Iskandar Setiadi](https://github.com/freedomofkeima)**<br/>~° Indonesian translation

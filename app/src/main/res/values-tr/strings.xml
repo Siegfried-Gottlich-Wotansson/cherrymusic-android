@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Some basics -->
+    <string name="settings">Ayarlar</string>
+    <string name="login">Giriş Yap</string>
+    <string name="info">Hakkında</string>
+    <string name="exit">Çıkış</string>
+    <string name="reload">Yeniden Yükle</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="filename">Dosya Adı</string>
+    <string name="profile">Profil</string>
+    <string name="changelog">Değişklik Günlüğü</string>
+
+    <!-- Main -->
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Geçerli yol yok </h1></center></font> <font size="25"><br> Lütfen ayarlarınızı kontrol edin!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Geçersiz SSL sertifikası </h1></center></font><font size="25"> <br> Tüm SSL sertifikalarını kabul etmek için bir seçenek vardır.<br><br><b> Dikkat:</b> Sertifika hatalarını yok saymak bir güvenlik riskidir!</font>]]></string>
+    <string name="ssl_toast_error">SSL sertifikası kabul edilmedi</string>
+    <string name="donate">Bağışı Yap</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">Genel ayarlar</string>
+    <string name="pref_title__expert_settings">Gelişmiş ayarlar</string>
+    <string name="show_button_on_the_bottom">Sağ altta düğmeyi göster</string>
+    <string name="no_data">Veri yok</string>
+    <string name="enable_auto_login">Otomatik girişi etkinleştir</string>
+    <string name="accept_all_ssl_certificates">Tüm SSL sertifikalarını kabul et</string>
+    <string name="profile_selection">Profil Seçimi</string>
+    <string name="profile_1">Profil 1</string>
+    <string name="profile_2">Profil 2</string>
+    <string name="profile_3">Profil 3</string>
+    <string name="path_domain_and_directory">Yol (Protokol, alan adı, klasör)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Katkıda Bulunanlar</string>
+    <string name="project_team">Proje ekibi</string>
+    <string name="licenses">Lisanslar</string>
+    <string name="show_app_license">Uygulamanın lisansını göster</string>
+    <string name="show_third_party_licenses">3. parti lisanslarını göster</string>
+    <string name="pref_title__language">Dil</string>
+    <string name="pref_desc__language">Bu uygulamanın dilini değiştirin. Değişikliklerin etkili olması için uygulamayı yeniden başlatın</string>
+</resources>

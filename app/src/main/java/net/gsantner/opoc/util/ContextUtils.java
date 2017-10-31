@@ -15,6 +15,7 @@ import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -27,6 +28,9 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.VectorDrawable;
@@ -34,6 +38,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
+import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
@@ -50,8 +55,9 @@ import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.util.DisplayMetrics;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -63,11 +69,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Method;
 import java.util.Locale;
 
 import static android.graphics.Bitmap.CompressFormat;
 
-@SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue", "SpellCheckingInspection", "deprecation"})
+@SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue", "SpellCheckingInspection", "deprecation", "ObsoleteSdkInt", "ConstantConditions", "UnusedReturnValue"})
 public class ContextUtils {
     //########################
     //## Members, Constructors
@@ -243,10 +250,10 @@ public class ContextUtils {
         ));
     }
 
+    @SuppressLint("MissingPermission") // ACCESS_NETWORK_STATE required
     public boolean isConnectedToInternet() {
-        ConnectivityManager connectivityManager = (ConnectivityManager)
-                _context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
+        ConnectivityManager con = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetInfo = con == null ? null : con.getActiveNetworkInfo();
         return activeNetInfo != null && activeNetInfo.isConnectedOrConnecting();
     }
 
@@ -320,7 +327,7 @@ public class ContextUtils {
     }
 
     // Find out if color above the given color should be light or dark. true if light
-    public boolean shouldColorOnTopBeLight(int colorOnBottomInt) {
+    public boolean shouldColorOnTopBeLight(@ColorInt int colorOnBottomInt) {
         return 186 > (((0.299 * Color.red(colorOnBottomInt))
                 + ((0.587 * Color.green(colorOnBottomInt))
                 + (0.114 * Color.blue(colorOnBottomInt)))));
@@ -335,6 +342,29 @@ public class ContextUtils {
             result = Html.fromHtml(html);
         }
         return result;
+    }
+
+    public void setClipboard(String text) {
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
+            ((android.text.ClipboardManager) _context.getSystemService(Context.CLIPBOARD_SERVICE)).setText(text);
+        } else {
+            ClipData clip = ClipData.newPlainText(_context.getPackageName(), text);
+            ((android.content.ClipboardManager) _context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(clip);
+        }
+    }
+
+    public String[] getClipboard() {
+        String[] ret;
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
+            ret = new String[]{((android.text.ClipboardManager) _context.getSystemService(Context.CLIPBOARD_SERVICE)).getText().toString()};
+        } else {
+            ClipData data = ((android.content.ClipboardManager) _context.getSystemService(Context.CLIPBOARD_SERVICE)).getPrimaryClip();
+            ret = new String[data.getItemCount()];
+            for (int i = 0; i < data.getItemCount() && i < ret.length; i++) {
+                ret[i] = data.getItemAt(i).getText().toString();
+            }
+        }
+        return ret;
     }
 
     public float px2dp(final float px) {
@@ -372,13 +402,13 @@ public class ContextUtils {
         return bitmap;
     }
 
-    public Bitmap loadImageFromFilesystem(String imagePath, int maxDimen) {
+    public Bitmap loadImageFromFilesystem(File imagePath, int maxDimen) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(imagePath, options);
+        BitmapFactory.decodeFile(imagePath.getAbsolutePath(), options);
         options.inSampleSize = calculateInSampleSize(options, maxDimen);
         options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeFile(imagePath, options);
+        return BitmapFactory.decodeFile(imagePath.getAbsolutePath(), options);
     }
 
     /**
@@ -408,15 +438,26 @@ public class ContextUtils {
         return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
     }
 
-    public File writeImageToFileJpeg(String path, String filename, Bitmap image) {
-        return writeImageToFile(path, filename, image, Bitmap.CompressFormat.JPEG, 95);
+    public File writeImageToFileJpeg(File imageFile, Bitmap image) {
+        return writeImageToFile(imageFile, image, Bitmap.CompressFormat.JPEG, 95);
     }
 
-    public File writeImageToFile(String path, String filename, Bitmap image, CompressFormat format, int quality) {
-        File imageFile = new File(path);
-        if (imageFile.exists() || imageFile.mkdirs()) {
-            imageFile = new File(path, filename);
 
+    public File writeImageToFileDetectFormat(File imageFile, Bitmap image, int quality) {
+        CompressFormat format = CompressFormat.JPEG;
+        String lc = imageFile.getAbsolutePath().toLowerCase(Locale.ROOT);
+        if (lc.endsWith(".png")) {
+            format = CompressFormat.PNG;
+        }
+        if (lc.endsWith(".webp")) {
+            format = CompressFormat.WEBP;
+        }
+        return writeImageToFile(imageFile, image, format, quality);
+    }
+
+    public File writeImageToFile(File imageFile, Bitmap image, CompressFormat format, int quality) {
+        File folder = new File(imageFile.getParent());
+        if (folder.exists() || folder.mkdirs()) {
             FileOutputStream stream = null;
             try {
                 stream = new FileOutputStream(imageFile); // overwrites this image every time
@@ -433,5 +474,87 @@ public class ContextUtils {
             }
         }
         return null;
+    }
+
+    public Bitmap drawTextToDrawable(@DrawableRes int resId, String text, int textSize) {
+        Resources resources = _context.getResources();
+        float scale = resources.getDisplayMetrics().density;
+        Bitmap bitmap = getBitmapFromDrawable(resId);
+
+        bitmap = bitmap.copy(bitmap.getConfig(), true);
+        Canvas canvas = new Canvas(bitmap);
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setColor(Color.rgb(61, 61, 61));
+        paint.setTextSize((int) (textSize * scale));
+        paint.setShadowLayer(1f, 0f, 1f, Color.WHITE);
+
+        Rect bounds = new Rect();
+        paint.getTextBounds(text, 0, text.length(), bounds);
+        int x = (bitmap.getWidth() - bounds.width()) / 2;
+        int y = (bitmap.getHeight() + bounds.height()) / 2;
+        canvas.drawText(text, x, y, paint);
+
+        return bitmap;
+    }
+
+    public Bitmap getBitmapFromDrawable(int drawableId) {
+        Bitmap bitmap = null;
+        Drawable drawable = ContextCompat.getDrawable(_context, drawableId);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && (drawable instanceof VectorDrawable || drawable instanceof VectorDrawableCompat)) {
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+                drawable = (DrawableCompat.wrap(drawable)).mutate();
+            }
+
+            bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(),
+                    drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+            Canvas canvas = new Canvas(bitmap);
+            drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+            drawable.draw(canvas);
+        } else if (drawable instanceof BitmapDrawable) {
+            bitmap = ((BitmapDrawable) drawable).getBitmap();
+        }
+        return bitmap;
+    }
+
+    public ContextUtils tintMenuItems(Menu menu, boolean recurse, @ColorInt int iconColor) {
+        for (int i = 0; i < menu.size(); i++) {
+            MenuItem item = menu.getItem(i);
+            Drawable drawable = item.getIcon();
+            if (drawable != null) {
+                drawable.mutate();
+                drawable.setColorFilter(iconColor, PorterDuff.Mode.SRC_IN);
+            }
+            if (item.hasSubMenu() && recurse) {
+                tintMenuItems(item.getSubMenu(), recurse, iconColor);
+            }
+        }
+        return this;
+    }
+
+    @SuppressLint("PrivateApi")
+    public ContextUtils setSubMenuIconsVisiblity(Menu menu, boolean visible) {
+        if (menu.getClass().getSimpleName().equals("MenuBuilder")) {
+            try {
+                Method m = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
+                m.setAccessible(true);
+                m.invoke(menu, visible);
+            } catch (Exception ignored) {
+            }
+        }
+        return this;
+    }
+
+    public void showRateOnGplayDialog() {
+        String pkgId = "details?id=" + _context.getPackageName();
+        Intent goToMarket = new Intent(Intent.ACTION_VIEW, Uri.parse("market://" + pkgId));
+        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                (Build.VERSION.SDK_INT >= 21 ? Intent.FLAG_ACTIVITY_NEW_DOCUMENT : Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET) |
+                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+        try {
+            _context.startActivity(goToMarket);
+        } catch (ActivityNotFoundException e) {
+            _context.startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://play.google.com/store/apps/" + pkgId)));
+        }
     }
 }

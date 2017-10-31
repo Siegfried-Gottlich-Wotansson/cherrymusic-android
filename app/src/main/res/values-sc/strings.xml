@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Some basics -->
+    <string name="settings">Impostatziones</string>
+    <string name="login">Intra</string>
+    <string name="info">A pitzu de</string>
+    <string name="exit">Essi</string>
+    <string name="reload">Torra a carrigare</string>
+    <string name="username">Nùmene impreadore</string>
+    <string name="password">Crae</string>
+    <string name="filename">Nùmene documentu</string>
+    <string name="profile">Profilu</string>
+    <string name="changelog">Elencu de sas modìficas</string>
+
+    <!-- Main -->
+    <string name="no_valid_path">&lt;font size=\"38\"&gt;&lt;center&gt;&lt;h1&gt; Àndala non vàlida &lt;/h1&gt;&lt;/center&gt;&lt;/font&gt; &lt;font size=\"25\"&gt;&lt;br&gt; Pro praghere verìfica sas impostatziones tuas!&lt;/font&gt;</string>
+    <string name="ssl_webview_error_str">&lt;font size=\"38\"&gt;&lt;center&gt;&lt;h1&gt; Certificadu SSL non vàlidu &lt;/h1&gt;&lt;/center&gt;&lt;/font&gt;&lt;font size=\"25\"&gt; &lt;br&gt; B\'est un\'optzione pro atzetare totu sos tzertificados SSL.&lt;br&gt;&lt;br&gt;&lt;b&gt; Atentzione:&lt;/b&gt; Ignorare sos errores de sos tzertificados podet pònnere a rìschiu sa seguresa tua!&lt;/font&gt;</string>
+    <string name="ssl_toast_error">Certificadu SSL non atzetadu</string>
+    <string name="donate">Dona</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">Impostatziones generales</string>
+    <string name="pref_title__expert_settings">Impostatziones avantzadas</string>
+    <string name="show_button_on_the_bottom">Ammustra su butone in bassu</string>
+    <string name="no_data">Perunu datu</string>
+    <string name="enable_auto_login">Abìlita s\'atzessu automàticu</string>
+    <string name="accept_all_ssl_certificates">Atzeta totu sos tzertificados SSL</string>
+    <string name="profile_selection">Ischerta de su profilu</string>
+    <string name="profile_1">Profilu 1</string>
+    <string name="profile_2">Profilu 2</string>
+    <string name="profile_3">Profilu 3</string>
+    <string name="path_domain_and_directory">Àndala (Protocollu, domìniu, cartella)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Contribuidores</string>
+    <string name="project_team">Grupu de progetu</string>
+    <string name="licenses">Litzèntzias</string>
+    <string name="show_app_license">Ammustra sa litzèntzia de s\'aplicatzione</string>
+    <string name="show_third_party_licenses">Ammustra sas litzèntzias de tertzas partes</string>
+    <string name="pref_title__language">Limba</string>
+    <string name="pref_desc__language">Càmbia sa limba de custa aplicatzione. Torra•la a allùghere pro fàghere in modu chi sas modìficas siant efetivas</string>
+</resources>

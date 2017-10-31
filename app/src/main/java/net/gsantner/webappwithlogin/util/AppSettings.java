@@ -4,10 +4,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 
-import de.live.gdev.cherrymusic.BuildConfig;
-import de.live.gdev.cherrymusic.R;
 import net.gsantner.opoc.util.AppSettingsBase;
 import net.gsantner.webappwithlogin.App;
+
+import de.live.gdev.cherrymusic.BuildConfig;
+import de.live.gdev.cherrymusic.R;
 
 public class AppSettings extends AppSettingsBase {
     private SharedPreferences prefCurrentProfile;
@@ -91,6 +92,9 @@ public class AppSettings extends AppSettingsBase {
         if (!TextUtils.isEmpty(ret) && ret.endsWith("/")) {
             ret = ret.substring(0, ret.length() - 1);
             setProfilePathDomainAndDirectory(ret);
+        }
+        if (!TextUtils.isEmpty(ret) && !ret.startsWith("http")) {
+            ret = "https://" + ret;
         }
         return ret;
     }

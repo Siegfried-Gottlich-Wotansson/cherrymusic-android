@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Some basics -->
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="login">Σύνδεση</string>
+    <string name="info">Πληροφορίες</string>
+    <string name="exit">Έξοδος</string>
+    <string name="reload">Επαναφόρτωση</string>
+    <string name="username">Όνομα χρήστη</string>
+    <string name="password">Κωδικός</string>
+    <string name="filename">Όνομα αρχείου</string>
+    <string name="profile">Προφίλ</string>
+    <string name="changelog">Changelog</string>
+
+    <!-- Main -->
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Μη έγκυρη διεύθυνση </h1></center></font> <font size="25"><br> Παρακαλώ ελέγξτε τις ρυθμίσεις σας!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Το SSL πιστοποιητικό δεν έγινε δεκτό </h1></center></font><font size="25"> <br> Υπάρχει επιλογή αποδοχής όλων των SSL πιστοποιητικών.<br><br><b> Προσοχή:</b> Μην αγνοείται σφάλματα πιστοποιητικών για την ασφαλειά σας!</font>]]></string>
+    <string name="ssl_toast_error">SSL πιστοποιητικό δεν έγινε δεκτό</string>
+    <string name="donate">Δωρεά</string>
+
+
+    <!-- Settings -->
+    <string name="pref_title__general_settings">Γενικές ρυθμίσεις</string>
+    <string name="pref_title__expert_settings">Σύνθετες ρυθμίσεις</string>
+    <string name="show_button_on_the_bottom">Εμφάνιση κουμπιού στο κάτω μέρος</string>
+    <string name="no_data">Δεν υπάρχουν δεομένα</string>
+    <string name="enable_auto_login">Ενεργοποιήστε την αυτόματη σύνδεση</string>
+    <string name="accept_all_ssl_certificates">Αποδοχή όλων των πιστοποιητικών SSL</string>
+    <string name="profile_selection">Επιλογή Προφίλ</string>
+    <string name="profile_1">Προφίλ 1</string>
+    <string name="profile_2">Προφίλ 2</string>
+    <string name="profile_3">Προφίλ 3</string>
+    <string name="path_domain_and_directory">Διαδρομή (πρωτόκολλο, τομέας, φάκελος)</string>
+
+
+    <!-- AboutActivity -->
+    <string name="contributors">Συνεισφέροντες</string>
+    <string name="project_team">Ομάδα έργου</string>
+    <string name="licenses">Άδειες</string>
+    <string name="show_app_license">Εμφάνιση της άδειας χρήσης της εφαρμογής</string>
+    <string name="show_third_party_licenses">Εμφάνιση αδειών τρίτων</string>
+    <string name="pref_title__language">Γλώσσα</string>
+    <string name="pref_desc__language">Αλλάξτε τη γλώσσα αυτής της εφαρμογής. Επανεκκινήστε την εφαρμογή για να εφαρμοστούν οι αλλαγές</string>
+</resources>

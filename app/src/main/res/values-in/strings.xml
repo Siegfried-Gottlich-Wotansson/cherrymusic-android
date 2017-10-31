@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Preferensi</string>
+    <string name="login">Login</string>
+    <string name="info">Tentang Kami</string>
+    <string name="exit">Keluar</string>
+    <string name="reload">Muat Ulang</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="password">Kata Sandi</string>
+    <string name="filename">Nama File</string>
+    <string name="profile">Profil</string>
+    <string name="changelog">Catatan Perubahan</string>
+
+    <string name="no_valid_path"><![CDATA[<font size="38"><center><h1> Alamat tidak ditemukan </h1></center></font> <font size="25"><br> Silahkan cek konfigurasi anda kembali!</font>]]></string>
+    <string name="ssl_webview_error_str"><![CDATA[<font size="38"><center><h1> Sertifikat SSL tidak valid </h1></center></font><font size="25"> <br> Disediakan preferensi untuk menerima koneksi dengan semua sertifikat SSL.<br><br><b> Peringatan:</b> Mengabaikan masalah sertifikat merupakan ancaman terhadap keamanan!</font>]]></string>
+    <string name="ssl_toast_error">Sertifikat SSL tidak diterima</string>
+    <string name="donate">Donasi</string>
+
+
+    <string name="pref_title__general_settings">Preferensi Umum</string>
+    <string name="pref_title__expert_settings">Preferensi Ahli</string>
+    <string name="show_button_on_the_bottom">Tampilkan tombol di bawah layar</string>
+    <string name="no_data">Tidak ada data</string>
+    <string name="enable_auto_login">Aktifkan auto-login</string>
+    <string name="accept_all_ssl_certificates">Terima semua sertifikat SSL</string>
+    <string name="profile_selection">Pilih Profil</string>
+    <string name="profile_1">Profil 1</string>
+    <string name="profile_2">Profil 2</string>
+    <string name="profile_3">Profil 3</string>
+    <string name="path_domain_and_directory">Alamat (Protokol, domain, folder)</string>
+
+
+    <string name="contributors">Kontributor</string>
+    <string name="project_team">Tim Proyek</string>
+    <string name="licenses">Lisensi</string>
+    <string name="show_app_license">Tampilkan lisensi applikasi</string>
+    <string name="show_third_party_licenses">Tampilkan lisensi pihak ketiga</string>
+    <string name="pref_title__language">Pilihan Bahasa</string>
+    <string name="pref_desc__language">Mengubah bahasa aplikasi. Buka ulang aplikasi setelah mengubah preferensi bahasa.</string>
+</resources>

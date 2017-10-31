@@ -31,10 +31,10 @@
         android:id="@+id/nav2"
         android:checkableBehavior="none">
         <item
-            android:id="@+id/action_donate_bitcoin"
+            android:id="@+id/action_donate"
             android:icon="@drawable/ic_favorite_white_48px"
             android:visible="false"
-            android:title="@string/donate_bitcoin"/>
+            android:title="@string/donate"/>
         <item
             android:id="@+id/action_info"
             android:icon="@drawable/ic_info_white_48px"

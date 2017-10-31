@@ -24,6 +24,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
+import net.gsantner.opoc.util.ActivityUtils;
+import net.gsantner.opoc.util.SimpleMarkdownParser;
+import net.gsantner.webappwithlogin.util.AppSettings;
+import net.gsantner.webappwithlogin.util.ContextUtils;
+
 import java.io.IOException;
 
 import butterknife.BindView;
@@ -32,11 +37,6 @@ import butterknife.OnClick;
 import butterknife.OnLongClick;
 import de.live.gdev.cherrymusic.BuildConfig;
 import de.live.gdev.cherrymusic.R;
-
-import net.gsantner.opoc.util.ActivityUtils;
-import net.gsantner.opoc.util.SimpleMarkdownParser;
-import net.gsantner.webappwithlogin.util.AppSettings;
-import net.gsantner.webappwithlogin.util.ContextUtils;
 import wawl.WawlOverrides;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         appSettings = AppSettings.get();
 
 
-
         WindowManager.LayoutParams attrs = getWindow().getAttributes();
         attrs.flags ^= WindowManager.LayoutParams.FLAG_FULLSCREEN;
         getWindow().setAttributes(attrs);
@@ -78,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Setup bars
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.getMenu().findItem(R.id.action_donate_bitcoin).setVisible(!BuildConfig.IS_GPLAY_BUILD);
+        navigationView.getMenu().findItem(R.id.action_donate).setVisible(!BuildConfig.IS_GPLAY_BUILD);
         fab.setVisibility(appSettings.isShowMainFab() ? View.VISIBLE : View.GONE);
         appSettings.setReloadRequired(false);
 
@@ -191,8 +190,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 webView.reload();
                 return true;
             }
-            case R.id.action_donate_bitcoin: {
-                ContextUtils.get().showDonateBitcoinRequest(R.string.donate__bitcoin_id, R.string.donate__bitcoin_amount, R.string.donate__bitcoin_amount, R.string.donate__bitcoin_url);
+            case R.id.action_donate: {
+                ContextUtils.get().openWebpageInExternalBrowser(getString(R.string.donate__url));
                 return true;
             }
             case R.id.action_homepage_additional: {
