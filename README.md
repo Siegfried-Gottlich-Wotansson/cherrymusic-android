@@ -1,5 +1,5 @@
 [![GitHub release](https://img.shields.io/github/release/gsantner/cherrymusic-android.svg)](https://github.com/gsantner/cherrymusic-android/releases)
-[![Donate](https://img.shields.io/badge/donate-bitcoin-orange.svg)](https://gsantner.github.io/#donate)
+[![Donate](https://img.shields.io/badge/donate-bitcoin-orange.svg)](http://gsantner.net/#donate)
 [![Donate LiberaPay](https://img.shields.io/badge/donate-liberapay-orange.svg)](https://liberapay.com/gsantner/donate)
 [![Build Status](https://travis-ci.org/gsantner/cherrymusic-android.svg?branch=master)](https://travis-ci.org/gsantner/cherrymusic-android)
 [![Translate - with Stringlate](https://img.shields.io/badge/stringlate-translate-green.svg)](https://lonamiwebs.github.io/stringlate/translate?git=https%3A%2F%2Fgithub.com%2Fgsantner%2Fcherrymusic-android.git&name=Cherry&web=https%3A%2F%2Fgithub.com%2Fgsantner%2Fcherrymusic-android)
@@ -39,7 +39,7 @@ Any other data than your entered data won't be collected or stored on your devic
 The project is always open for contributions and accepts pull requests.
 The project uses [AOSP Java Code Style](https://source.android.com/source/code-style#follow-field-naming-conventions), with one exception: private members are `_camelCase` instead of `mBigCamel`. You may use Android Studios _auto reformat feature_ before sending a PR.
 
-Translations can be contributed on GitHub or via [E-Mail](https://gsantner.github.io/#contact). You can use Stringlate ([![Translate - with Stringlate](https://img.shields.io/badge/stringlate-translate-green.svg)](https://lonamiwebs.github.io/stringlate/translate?git=https%3A%2F%2Fgithub.com%2Fgsantner%2Fcherrymusic-android.git&name=cherry%20TT&web=https%3A%2F%2Fgithub.com%2Fgsantner%2Fcherrymusic-android)) to translate the project directly on your Android phone. It allows you to export as E-Mail attachement and to post on GitHub.
+Translations can be contributed on GitHub or via [E-Mail](http://gsantner.net/#contact). You can use Stringlate ([![Translate - with Stringlate](https://img.shields.io/badge/stringlate-translate-green.svg)](https://lonamiwebs.github.io/stringlate/translate?git=https%3A%2F%2Fgithub.com%2Fgsantner%2Fcherrymusic-android.git&name=cherry%20TT&web=https%3A%2F%2Fgithub.com%2Fgsantner%2Fcherrymusic-android)) to translate the project directly on your Android phone. It allows you to export as E-Mail attachement and to post on GitHub.
 
 #### Resources
 * Project: [Changelog](/CHANGELOG.md) | [Issues level/beginner](https://github.com/gsantner/cherrymusic-android/issues?q=is%3Aissue+is%3Aopen+label%3Alevel%2Fbeginner) | [License](/LICENSE.txt) | [CoC](/CODE_OF_CONDUCT.md)
@@ -47,7 +47,7 @@ Translations can be contributed on GitHub or via [E-Mail](https://gsantner.githu
 * cherry: [Homepage](http://www.cherry.org/) | [Demo Account](https://demo.cherry.org/status.php)
 
 ## Licensing
-Project created and maintained by <a href="https://gsantner.github.io">Gregor Santner</a> since 2015.
+Project created and maintained by <a href="http://gsantner.net">Gregor Santner</a> since 2015.
 The code of the app is licensed MIT. Localization files and resources (string\*.xml) are licensed CC0 1.0.
 For more licensing informations, see [`3rd party licenses`](/app/src/main/res/raw/licenses_3rd_party.md).
 Note that the projects [cherrymusic-android](https://github.com/gsantner/cherrymusic-android) and [kimai-android](https://github.com/gsantner/kimai-android) share the code base.

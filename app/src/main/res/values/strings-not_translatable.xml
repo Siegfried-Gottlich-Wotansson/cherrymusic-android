@@ -1,13 +1,13 @@
 <resources>
 
     <!-- General -->
-    <string name="page_author" translatable="false">https://gsantner.github.io/</string>
+    <string name="page_author" translatable="false">http://gsantner.net/</string>
     <string name="blog" translatable="false">Blog</string>
 
     <string name="donate__bitcoin_id" translatable="false">1B9ZyYdQoY9BxMe9dRUEKaZbJWsbQqfXU5</string>
     <string name="donate__bitcoin_amount" translatable="false">0.01</string>
     <string name="donate__bitcoin_message" translatable="false">Have some coke, and a nice day</string>
-    <string name="donate__bitcoin_url" translatable="false">https://gsantner.github.io/donate/#donate</string>
+    <string name="donate__bitcoin_url" translatable="false">http://gsantner.net/donate/#donate</string>
     <string name="donate__url" translatable="false">https://liberapay.com/gsantner/donate</string>
 
     <string name="app_version_v" translatable="false">App Version  v%1$s</string>

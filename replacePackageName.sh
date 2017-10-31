@@ -4,7 +4,7 @@
 #   Package name replacer
 #
 #   Created by Gregor Santer (gsantner), 2017
-#   https://gsantner.github.io/
+#   http://gsantner.net/
 #
 #########################################################
 

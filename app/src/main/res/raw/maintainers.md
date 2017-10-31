@@ -1,2 +1,2 @@
 * Gregor Santner
-~° <https://gsantner.github.io>
+~° <http://gsantner.net>
