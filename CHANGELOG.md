@@ -1,3 +1,6 @@
+### v1.3.11
+- Translated in more languages
+
 ### v1.3.10
 - Fixed: Language list when building outside of project root
 

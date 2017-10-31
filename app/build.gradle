@@ -24,8 +24,8 @@ android {
         buildConfigField "String", "GITHASH", "\"${getGitHash()}\""
 
         applicationId "de.live.gdev.cherrymusic"
-        versionName "1.3.10"
-        versionCode 13
+        versionName "1.3.11"
+        versionCode 14
 
     }
 
